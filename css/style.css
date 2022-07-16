@@ -65,14 +65,8 @@ header nav ul li a {
     text-align: center;
 }
 
-nav ul li:hover {
-    background-color: #594020;
-    opacity: 80%;
-    transition: 0.5s;
-    display: flex;
-    justify-content: center;
-    border-radius: 10px;
-    width: 80%;
+header nav ul li:hover {
+    transform: scale(1.5);
     margin-right: auto;
     margin-left: auto;
     font-weight: bold;
@@ -728,7 +722,7 @@ footer {
         display: none;
     }
 
-    nav {
+    header nav {
         grid-area: nav;
         grid-column-start: 2;
         grid-column-end: 4;
@@ -736,15 +730,20 @@ footer {
         grid-row-end: 1;
     }
 
-    nav ul {
+    header nav ul {
         position: relative;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         height: 60px;
         left: 0;
         top: 5px;
         text-align: center;
         align-items: center;
+    }
+
+    nav ul li {
+        line-height: 60px;
+        margin: 0px 70px;
     }
 
     header nav ul li a {
@@ -756,19 +755,6 @@ footer {
         height: 50px;
         margin-top: 10px;
         padding: 0px;
-    }
-
-    Header nav ul li:hover {
-        background-color: #594020;
-        opacity: 80%;
-        transition: 0.5s;
-        border-radius: 50px;
-        display: flex;
-        justify-content: center;
-        width: auto;
-        height: 10px;
-        margin: 0;
-        align-items: center;
     }
 
     .contGrid {
@@ -1015,7 +1001,7 @@ footer {
         display: grid;
         grid-template-areas:
             "imgHeader nav nav";
-            grid-template-columns: 1fr 2fr 2fr;
+        grid-template-columns: 1fr 2fr 2fr;
     }
 
     .imgHeader {
@@ -1046,28 +1032,10 @@ footer {
         align-items: center;
     }
 
-    header nav ul li a {
-        font-size: 15px;
-        height: 60px;
-    }
-
     .logo {
-        height: 60px;
+        height: 50px;
         margin-top: 10px;
         padding: 0px;
-    }
-
-    Header nav ul li:hover {
-        background-color: #594020;
-        opacity: 80%;
-        transition: 0.5s;
-        border-radius: 50px;
-        display: flex;
-        justify-content: center;
-        width: auto;
-        height: 10px;
-        margin: 0;
-        align-items: center;
     }
 
     .imgHeader {
@@ -1079,7 +1047,7 @@ footer {
     }
 
     header nav ul {
-        height: 70px;
+        height: 60px;
         display: flex;
         align-items: center;
     }
@@ -1088,7 +1056,7 @@ footer {
         text-decoration: none;
         font-family: 'Montserrat', sans-serif;
         font-weight: bolder;
-        font-size: 15px;
+        font-size: 20px;
         color: white;
         text-align: center;
     }
@@ -1121,7 +1089,7 @@ footer {
         grid-column-start: 1;
         grid-column-end: 4;
         grid-row-start: 6;
-        grid-row-end: 6;
+        grid-row-end: 7;
     }
 
     .visionTitulo {
