@@ -65,14 +65,6 @@ header nav ul li a {
     text-align: center;
 }
 
-header nav ul li:hover {
-    transform: scale(1.5);
-    margin-right: auto;
-    margin-left: auto;
-    font-weight: bold;
-    transition: 0.5s;
-}
-
 nav ul {
     position: fixed;
     width: 100%;
@@ -688,7 +680,9 @@ footer {
     margin-top: 2%;
 }
 
-/*SALTO EN 768PX*/
+/*//////////////////////////////////////////////////////////////////////////*/
+/*---------------------------SALTO A 768------------------------------------*/
+/*//////////////////////////////////////////////////////////////////////////*/
 
 @media (min-width:768px) {
 
@@ -704,10 +698,16 @@ footer {
             "footerGrid footerGrid";
     }
 
+    .checkBtn {
+        display: none;
+    }
+
     .barraNav {
         display: grid;
         grid-template-areas:
             "imgHeader nav";
+        grid-template-columns: 1fr 2fr;
+        height: 60px;
     }
 
     .imgHeader {
@@ -716,16 +716,18 @@ footer {
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 1;
+        height: 60px;
+        background-color: #F2B807;
     }
 
-    .checkBtn {
-        display: none;
+    header {
+        height: 60px;
     }
 
-    header nav {
+    nav {
         grid-area: nav;
-        grid-column-start: 2;
-        grid-column-end: 4;
+        grid-column-start: 3;
+        grid-column-end: 3;
         grid-row-start: 1;
         grid-row-end: 1;
     }
@@ -734,7 +736,7 @@ footer {
         position: relative;
         display: flex;
         justify-content: space-evenly;
-        height: 60px;
+        height: 50px;
         left: 0;
         top: 5px;
         text-align: center;
@@ -751,10 +753,22 @@ footer {
         height: 60px;
     }
 
+    header nav ul li a:hover {
+        color: #594020;
+    }
+
     .logo {
         height: 50px;
-        margin-top: 10px;
+        margin-top: 5px;
         padding: 0px;
+    }
+
+    .footerGrid {
+        display: grid;
+        grid-template-areas:
+            "footerTexto footerMapa"
+            "footerCopyright footerCopyright";
+        grid-template-columns: 1fr 1fr;
     }
 
     .contGrid {
@@ -780,22 +794,6 @@ footer {
         grid-column-end: 3;
         grid-row-start: 6;
         grid-row-end: 6;
-    }
-
-    .imgHeader {
-        grid-area: imgHeader;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 1;
-    }
-
-    .footerGrid {
-        display: grid;
-        grid-template-areas:
-            "footerTexto footerMapa"
-            "footerCopyright footerCopyright";
-        grid-template-columns: 1fr 1fr;
     }
 
     .visionTitulo {
@@ -836,6 +834,8 @@ footer {
         margin: 2% auto 2% auto;
     }
 
+    /*---------------------------NOSOTROS 768-----------------------------------*/
+
     .mainGridNosotros {
         display: grid;
         grid-template-areas:
@@ -866,6 +866,8 @@ footer {
         align-items: center;
         justify-content: center;
     }
+
+    /*---------------------------PRODUCTOS 768-----------------------------------*/
 
     .mainGridProductos {
         display: grid;
@@ -904,6 +906,8 @@ footer {
         width: 90%;
         margin-bottom: 20px;
     }
+
+    /*---------------------------PROCESO 768-----------------------------------*/
 
     .mainGridProceso {
         display: grid;
@@ -946,6 +950,8 @@ footer {
         margin-bottom: 10px;
     }
 
+    /*---------------------------CONTACTO 768-----------------------------------*/
+
     .mainGridContacto {
         display: grid;
         grid-template-areas:
@@ -979,7 +985,9 @@ footer {
     }
 }
 
-/*SALTO EN 1024PX*/
+/*//////////////////////////////////////////////////////////////////////////*/
+/*---------------------------SALTO A 1024-----------------------------------*/
+/*//////////////////////////////////////////////////////////////////////////*/
 
 @media (min-width:1024px) {
 
@@ -996,12 +1004,17 @@ footer {
         grid-template-columns: 1fr 2fr 2fr;
     }
 
+    header {
+        height: 80px;
+        background-color: #F2B807;
+    }
 
     .barraNav {
         display: grid;
         grid-template-areas:
             "imgHeader nav nav";
         grid-template-columns: 1fr 2fr 2fr;
+        height: 80px;
     }
 
     .imgHeader {
@@ -1021,35 +1034,25 @@ footer {
         grid-row-end: 1;
     }
 
-    nav ul {
-        position: relative;
+    header nav ul {
+        height: 80px;
         display: flex;
-        justify-content: space-around;
-        height: 60px;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
         left: 0;
-        top: 5px;
-        text-align: center;
-        align-items: center;
+        top: 0px;
+    }
+
+    nav ul li {
+        line-height: 80px;
+        margin: 0px 20px;
     }
 
     .logo {
-        height: 50px;
+        height: 60px;
         margin-top: 10px;
         padding: 0px;
-    }
-
-    .imgHeader {
-        grid-column-start: 1;
-        grid-column-end: 1;
-        grid-row-start: 1;
-        grid-row-end: 1;
-        height: 80px;
-    }
-
-    header nav ul {
-        height: 60px;
-        display: flex;
-        align-items: center;
     }
 
     header nav ul li a {
