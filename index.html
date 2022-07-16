@@ -7,18 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/logotipo.jpeg">
     <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Golden tree</title>
 </head>
 
 <body>
 
     <div class="mainGrid">
-        <div class="imgHeader">
-            <img src="./images/logotipoPequeño320.jpg" alt="Logo y nombre de la empresa">
-        </div>
 
         <header class="barraNav">
+            <a href="./index.html" class="imgHeader">
+                <img src="./images/logoTextoNega.png" alt="Logo y nombre de la empresa" class="logo">
+            </a>
             <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
                 <ul>
                     <li>
                         <a href="index.html">Inicio</a>
@@ -52,19 +60,19 @@
         </div>
 
         <div class="contGrid">
-            <p class="cont1">Trabajando desde 1989</p>
+            <p class="cont1" data-aos="zoom-in">Trabajando desde 1989</p>
 
-            <p class="cont2">Más de 12 millones de bolsas producidas por año</p>
+            <p class="cont2" data-aos="zoom-in">Más de 12 millones de bolsas producidas por año</p>
 
-            <p class="cont3">Sin accidentes laborales por más de 1200 días</p>
+            <p class="cont3" data-aos="zoom-in">Sin accidentes laborales por más de 1200 días</p>
         </div>
 
         <div class="visionMisionGrid">
-            <div class="visionTitulo">
+            <div class="visionTitulo" data-aos="zoom-in">
                 <h3>Nuestra visión</h3>
             </div>
 
-            <div class="visionTexto">
+            <div class="visionTexto" data-aos="zoom-in">
                 <p>Ser el fabricante y distribuidor número uno de bolsas en la
                     región,
                     brindando una solución de
@@ -72,11 +80,11 @@
                     compromisos.</p>
             </div>
 
-            <div class="misionTitulo">
+            <div class="misionTitulo" data-aos="zoom-in">
                 <h3>Nuestra misión</h3>
             </div>
 
-            <div class="misionTexto">
+            <div class="misionTexto" data-aos="zoom-in">
                 <p><strong>Golden Tree</strong> se dedica a entregar un producto
                     superior a nuestros
                     clientes, en tiempo y forma.
@@ -90,7 +98,7 @@
 
         <footer class="footerGrid">
             <div class="footerTexto">
-                <img src="./images/logotipoPequeño320.jpg" alt="">
+                <img src="./images/logoTexto.png" alt="logo empresa">
                 <p>Teniente Galeano 3682</p>
                 <p>Tel.: +598 2511 35 04 / 2513 05 96</p>
                 <p>email: goldentree@goldentree.com.uy</p>
@@ -109,6 +117,10 @@
             </div>
         </footer>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

@@ -26,34 +26,97 @@ body {
     width: 100%;
 }
 
+/*HEADER*/
+
+header {
+    grid-area: barraNav;
+    height: 50px;
+}
+
+.barraNav {
+    display: grid;
+    grid-template-areas:
+        "imgHeader nav";
+}
+
+.imgHeader {
+    grid-area: imgHeader;
+    background-color: #F2B807;
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    background-color: #F2B807;
+    justify-content: flex-end;
+}
+
 header nav ul {
     list-style-type: none;
     background-color: #F2B807;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
 }
 
 header nav ul li a {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-weight: bolder;
+    font-size: 25px;
     color: white;
+    text-align: center;
 }
 
-header ul li a:hover {
+nav ul li:hover {
+    background-color: #594020;
+    opacity: 80%;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
     font-weight: bold;
-    color: #594020;
-}
-
-header {
-    grid-area: barraNav;
+    transition: 0.5s;
 }
 
 nav ul {
-    display: flex;
-    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 50px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 2;
 }
+
+nav ul li {
+    line-height: 30px;
+    display: block;
+    margin: 50px 0px;
+}
+
+.checkBtn {
+    font-size: 40px;
+    color: white;
+    margin-right: 40px;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked~ul {
+    left: 0px;
+}
+
+.logo {
+    height: 60px;
+    padding: 10px;
+}
+
+
+/*FOOTER*/
 
 footer {
     background-color: #D99C52;
@@ -69,7 +132,7 @@ footer {
         "footerCopyright"
 }
 
-.tituloImg img{
+.tituloImg img {
     max-width: 100%;
 }
 
@@ -78,7 +141,6 @@ footer {
 .mainGrid {
     display: grid;
     grid-template-areas:
-        "imgHeader"
         "barraNav"
         "titulo"
         "subtitulo"
@@ -120,31 +182,43 @@ footer {
 
 .cont1 {
     grid-area: cont1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 5%;
     background: rgb(242, 235, 128);
     background: radial-gradient(circle, rgba(242, 235, 128, 1) 22%, rgba(242, 203, 7, 1) 62%, rgba(242, 184, 7, 1) 100%);
     font-weight: bold;
     width: 80%;
+    height: 100px;
     margin: 2% auto 2% auto;
 }
 
 .cont2 {
     grid-area: cont2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 5%;
     background: rgb(242, 235, 128);
     background: radial-gradient(circle, rgba(242, 235, 128, 1) 22%, rgba(242, 203, 7, 1) 62%, rgba(242, 184, 7, 1) 100%);
     font-weight: bold;
     width: 80%;
+    height: 100px;
     margin: 2% auto 2% auto;
 }
 
 .cont3 {
     grid-area: cont3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 5%;
     background: rgb(242, 235, 128);
     background: radial-gradient(circle, rgba(242, 235, 128, 1) 22%, rgba(242, 203, 7, 1) 62%, rgba(242, 184, 7, 1) 100%);
     font-weight: bold;
     width: 80%;
+    height: 100px;
     margin: 2% auto 2% auto;
 }
 
@@ -203,7 +277,6 @@ footer {
 .mainGridNosotros {
     display: grid;
     grid-template-areas:
-        "imgheader"
         "barraNav"
         "titulo"
         "subtitulo"
@@ -248,7 +321,6 @@ footer {
 .mainGridProductos {
     display: grid;
     grid-template-areas:
-        "imgHeader"
         "barraNav"
         "titulo"
         "subtitulo"
@@ -373,7 +445,6 @@ footer {
 .mainGridProceso {
     display: grid;
     grid-template-areas:
-        "imgHeader"
         "barraNav"
         "titulo"
         "subtitulo"
@@ -509,7 +580,6 @@ footer {
 .mainGridContacto {
     display: grid;
     grid-template-areas:
-        "imgHeader"
         "barraNav"
         "titulo"
         "subtitulo"
@@ -571,7 +641,7 @@ footer {
     border-bottom: #594020 2px solid;
 }
 
-.form6 textarea{
+.form6 textarea {
     width: 100%;
 }
 
@@ -631,7 +701,6 @@ footer {
     .mainGrid {
         display: grid;
         grid-template-areas:
-            "imgHeader imgHeader"
             "barraNav barraNav"
             "titulo titulo"
             "subtitulo subtitulo"
@@ -639,6 +708,67 @@ footer {
             "contGrid contGrid"
             "visionMisionGrid visionMisionGrid"
             "footerGrid footerGrid";
+    }
+
+    .barraNav {
+        display: grid;
+        grid-template-areas:
+            "imgHeader nav";
+    }
+
+    .imgHeader {
+        grid-area: imhHeader;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .checkBtn {
+        display: none;
+    }
+
+    nav {
+        grid-area: nav;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    nav ul {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        height: 60px;
+        left: 0;
+        top: 5px;
+        text-align: center;
+        align-items: center;
+    }
+
+    header nav ul li a {
+        font-size: 15px;
+        height: 60px;
+    }
+
+    .logo {
+        height: 50px;
+        margin-top: 10px;
+        padding: 0px;
+    }
+
+    Header nav ul li:hover {
+        background-color: #594020;
+        opacity: 80%;
+        transition: 0.5s;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        width: auto;
+        height: 10px;
+        margin: 0;
+        align-items: center;
     }
 
     .contGrid {
@@ -650,8 +780,8 @@ footer {
             "cont3";
         grid-column-start: 1;
         grid-column-end: 3;
-        grid-row-start: 6;
-        grid-row-end: 6;
+        grid-row-start: 5;
+        grid-row-end: 5;
     }
 
     .visionMisionGrid {
@@ -662,21 +792,16 @@ footer {
             "misionTitulo misionTexto";
         grid-column-start: 1;
         grid-column-end: 3;
-        grid-row-start: 7;
-        grid-row-end: 7;
+        grid-row-start: 6;
+        grid-row-end: 6;
     }
 
     .imgHeader {
+        grid-area: imgHeader;
         grid-column-start: 1;
-        grid-column-end: 3;
+        grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 1;
-    }
-
-    header nav ul {
-        height: 70px;
-        display: flex;
-        align-items: center;
     }
 
     .footerGrid {
@@ -875,7 +1000,7 @@ footer {
     .mainGrid {
         display: grid;
         grid-template-areas:
-            "imgHeader barraNav barraNav"
+            "barraNav barraNav barraNav"
             "titulo titulo titulo"
             "subtitulo subtitulo subtitulo"
             "tituloImg tituloImg tituloImg"
@@ -885,17 +1010,87 @@ footer {
         grid-template-columns: 1fr 2fr 2fr;
     }
 
+
+    .barraNav {
+        display: grid;
+        grid-template-areas:
+            "imgHeader nav nav";
+            grid-template-columns: 1fr 2fr 2fr;
+    }
+
+    .imgHeader {
+        grid-area: imhHeader;
+        height: 80px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    nav {
+        grid-area: nav;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    nav ul {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        height: 60px;
+        left: 0;
+        top: 5px;
+        text-align: center;
+        align-items: center;
+    }
+
+    header nav ul li a {
+        font-size: 15px;
+        height: 60px;
+    }
+
+    .logo {
+        height: 60px;
+        margin-top: 10px;
+        padding: 0px;
+    }
+
+    Header nav ul li:hover {
+        background-color: #594020;
+        opacity: 80%;
+        transition: 0.5s;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        width: auto;
+        height: 10px;
+        margin: 0;
+        align-items: center;
+    }
+
     .imgHeader {
         grid-column-start: 1;
         grid-column-end: 1;
         grid-row-start: 1;
         grid-row-end: 1;
+        height: 80px;
     }
 
     header nav ul {
         height: 70px;
         display: flex;
         align-items: center;
+    }
+
+    header nav ul li a {
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bolder;
+        font-size: 15px;
+        color: white;
+        text-align: center;
     }
 
     .footerGrid {
@@ -970,7 +1165,7 @@ footer {
     .mainGridNosotros {
         display: grid;
         grid-template-areas:
-            "imgHeader barraNav barraNav"
+            "barraNav barraNav barraNav"
             "titulo titulo titulo"
             "subtitulo subtitulo subtitulo"
             "tituloImg tituloImg tituloImg"
@@ -1000,7 +1195,7 @@ footer {
     .mainGridProductos {
         display: grid;
         grid-template-areas:
-            "imgHeader barraNav barraNav"
+            "barraNav barraNav barraNav"
             "titulo titulo titulo"
             "subtitulo subtitulo subtitulo"
             "tituloImg tituloImg tituloImg"
@@ -1038,7 +1233,7 @@ footer {
     .mainGridProceso {
         display: grid;
         grid-template-areas:
-            "imgHeader barraNav barraNav"
+            "barraNav barraNav barraNav"
             "titulo titulo titulo"
             "subtitulo subtitulo subtitulo"
             "tituloImg tituloImg tituloImg"
@@ -1079,7 +1274,7 @@ footer {
     .mainGridContacto {
         display: grid;
         grid-template-areas:
-            "imgHeader barraNav barraNav"
+            "barraNav barraNav barraNav"
             "titulo titulo titulo"
             "subtitulo subtitulo subtitulo"
             "tituloImg tituloImg tituloImg"
