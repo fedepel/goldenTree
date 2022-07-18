@@ -23,7 +23,7 @@ font-family: 'Open Sans', sans-serif;
 body {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
-    width: 100%;
+    width: 100vw;
 }
 
 .barraNav {
