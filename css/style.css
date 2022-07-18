@@ -26,81 +26,73 @@ body {
     width: 100%;
 }
 
-/*HEADER*/
-
-header {
-    grid-area: barraNav;
-    height: 50px;
-}
-
 .barraNav {
-    display: grid;
-    grid-template-areas:
-        "imgHeader nav";
-}
-
-.imgHeader {
-    grid-area: imgHeader;
     background-color: #F2B807;
-}
-
-nav {
-    grid-area: nav;
-    display: flex;
-    background-color: #F2B807;
-    justify-content: flex-end;
-}
-
-header nav ul {
-    list-style-type: none;
-    background-color: #F2B807;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bolder;
-    font-size: 25px;
-    color: white;
-    text-align: center;
-}
-
-nav ul {
-    position: fixed;
+    height: 70px;
     width: 100%;
-    height: 100vh;
-    top: 50px;
-    left: -100%;
-    text-align: center;
-    transition: all 0.5s;
-    z-index: 2;
-}
-
-nav ul li {
-    line-height: 30px;
-    display: block;
-    margin: 50px 0px;
-}
-
-.checkBtn {
-    font-size: 40px;
-    color: white;
-    margin-right: 40px;
-}
-
-#check {
-    display: none;
-}
-
-#check:checked~ul {
-    left: 0px;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.3);
 }
 
 .logo {
-    height: 60px;
-    padding: 10px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 20px;
 }
 
+.navToggle {
+    background: none;
+    border: none;
+    display: block;
+    margin-right: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.menuItems {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F2B807;
+    position: fixed;
+    left: 100%;
+    top: 70px;
+    width: 100%;
+    height: calc(100% - 70px);
+    overflow-y: auto;
+    transition: left 0.5s;
+}
+
+.menuItems_transition {
+    left: 0;
+}
+
+.menuItems li {
+    height: 50px;
+    padding: 8px 12px;
+    margin: 10px 5px;
+    display: flex;
+    align-items: center;
+}
+
+.menuItems li:hover {
+    background-color: none;
+    color: black;
+}
+
+.menuItems li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
 
 /*FOOTER*/
 
@@ -118,16 +110,11 @@ footer {
         "footerCopyright"
 }
 
-.tituloImg img {
-    max-width: 100%;
-}
-
 /*PAGINA INDEX*/
 
 .mainGrid {
     display: grid;
     grid-template-areas:
-        "barraNav"
         "titulo"
         "subtitulo"
         "tituloImg"
@@ -148,7 +135,7 @@ footer {
     color: white;
     font-weight: bold;
     font-size: 200%;
-    margin-top: 2%;
+    margin-top: 80px;
 }
 
 .subtitulo {
@@ -163,7 +150,7 @@ footer {
 }
 
 .tituloImg img {
-    size-adjust: var();
+    width: 100vh;
 }
 
 .cont1 {
@@ -246,6 +233,10 @@ footer {
     font-weight: bolder;
 }
 
+.footerTexto img {
+    height: 60px;
+}
+
 .footerMapa {
     grid-area: footerMapa;
     padding: 2%;
@@ -263,7 +254,6 @@ footer {
 .mainGridNosotros {
     display: grid;
     grid-template-areas:
-        "barraNav"
         "titulo"
         "subtitulo"
         "tituloImg"
@@ -307,7 +297,6 @@ footer {
 .mainGridProductos {
     display: grid;
     grid-template-areas:
-        "barraNav"
         "titulo"
         "subtitulo"
         "tituloImg"
@@ -431,7 +420,6 @@ footer {
 .mainGridProceso {
     display: grid;
     grid-template-areas:
-        "barraNav"
         "titulo"
         "subtitulo"
         "tituloImg"
@@ -566,7 +554,6 @@ footer {
 .mainGridContacto {
     display: grid;
     grid-template-areas:
-        "barraNav"
         "titulo"
         "subtitulo"
         "tituloImg"
@@ -686,81 +673,76 @@ footer {
 
 @media (min-width:768px) {
 
+    .barraNav {
+        background-color: #F2B807;
+        height: 70px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.3);
+    }
+    
+    .logo {
+        height: 50px;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    
+    .navToggle {
+        background: none;
+        border: none;
+    }
+    
+    .menu {
+        justify-content: space-between;
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+    
+    .menuItems {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        left: 0;
+        top: 0;
+    }
+
+    .menuItems li {
+        height: 50px;
+        padding: 8px 12px;
+        margin: 10px 5px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .menuItems li:hover {
+        background-color: rgb(0, 0, 0, 0.3);
+        transition: 0.5s;
+        border-radius: 5px;
+    }
+    
+    .menuItems li a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .navToggle {
+        display: none;
+    }
+
     .mainGrid {
         display: grid;
         grid-template-areas:
-            "barraNav barraNav"
             "titulo titulo"
             "subtitulo subtitulo"
             "tituloImg tituloImg"
             "contGrid contGrid"
             "visionMisionGrid visionMisionGrid"
             "footerGrid footerGrid";
-    }
-
-    .checkBtn {
-        display: none;
-    }
-
-    .barraNav {
-        display: grid;
-        grid-template-areas:
-            "imgHeader nav";
-        grid-template-columns: 1fr 2fr;
-        height: 60px;
-    }
-
-    .imgHeader {
-        grid-area: imhHeader;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 1;
-        height: 60px;
-        background-color: #F2B807;
-    }
-
-    header {
-        height: 60px;
-    }
-
-    nav {
-        grid-area: nav;
-        grid-column-start: 3;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 1;
-    }
-
-    header nav ul {
-        position: relative;
-        display: flex;
-        justify-content: space-evenly;
-        height: 50px;
-        left: 0;
-        top: 5px;
-        text-align: center;
-        align-items: center;
-    }
-
-    nav ul li {
-        line-height: 60px;
-        margin: 0px 70px;
-    }
-
-    header nav ul li a {
-        font-size: 15px;
-        height: 60px;
-    }
-
-    header nav ul li a:hover {
-        color: #594020;
-    }
-
-    .logo {
-        height: 50px;
-        margin-top: 5px;
-        padding: 0px;
     }
 
     .footerGrid {
@@ -780,8 +762,8 @@ footer {
             "cont3";
         grid-column-start: 1;
         grid-column-end: 3;
-        grid-row-start: 5;
-        grid-row-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 4;
     }
 
     .visionMisionGrid {
@@ -792,8 +774,8 @@ footer {
             "misionTitulo misionTexto";
         grid-column-start: 1;
         grid-column-end: 3;
-        grid-row-start: 6;
-        grid-row-end: 6;
+        grid-row-start: 5;
+        grid-row-end: 5;
     }
 
     .visionTitulo {
@@ -839,8 +821,6 @@ footer {
     .mainGridNosotros {
         display: grid;
         grid-template-areas:
-            "imgHeader imgHeader"
-            "barraNav barraNav"
             "titulo titulo"
             "subtitulo subtitulo"
             "tituloImg tituloImg"
@@ -856,8 +836,8 @@ footer {
             "nosotrosImgDos nosotrosTextoDos";
         grid-column-start: 1;
         grid-column-end: 3;
-        grid-row-start: 6;
-        grid-row-end: 6;
+        grid-row-start: 5;
+        grid-row-end: 5;
     }
 
     .nosotrosImgUno,
@@ -872,8 +852,6 @@ footer {
     .mainGridProductos {
         display: grid;
         grid-template-areas:
-            "imgHeader imgHeader"
-            "barraNav barraNav"
             "titulo titulo"
             "subtitulo subtitulo"
             "tituloImg tituloImg"
@@ -895,8 +873,8 @@ footer {
             "productoTexto4 productoImg4";
         grid-column-start: 1;
         grid-column-end: 3;
-        grid-row-start: 6;
-        grid-row-end: 6;
+        grid-row-start: 5;
+        grid-row-end: 5;
     }
 
     .productoTitulo1,
@@ -912,8 +890,6 @@ footer {
     .mainGridProceso {
         display: grid;
         grid-template-areas:
-            "imgHeader imgHeader"
-            "barraNav barraNav"
             "titulo titulo"
             "subtitulo subtitulo"
             "tituloImg tituloImg"
@@ -938,8 +914,8 @@ footer {
             "etapaTexto4 etapaImg4";
         grid-column-start: 1;
         grid-column-end: 3;
-        grid-row-start: 6;
-        grid-row-end: 6;
+        grid-row-start: 5;
+        grid-row-end: 5;
     }
 
     .etapaTitulo1,
@@ -955,8 +931,6 @@ footer {
     .mainGridContacto {
         display: grid;
         grid-template-areas:
-            "imgHeader imgHeader"
-            "barraNav barraNav"
             "titulo titulo"
             "subtitulo subtitulo"
             "tituloImg tituloImg"
@@ -994,7 +968,6 @@ footer {
     .mainGrid {
         display: grid;
         grid-template-areas:
-            "barraNav barraNav barraNav"
             "titulo titulo titulo"
             "subtitulo subtitulo subtitulo"
             "tituloImg tituloImg tituloImg"
@@ -1002,66 +975,6 @@ footer {
             "visionMisionGrid visionMisionGrid visionMisionGrid"
             "footerGrid footerGrid footerGrid";
         grid-template-columns: 1fr 2fr 2fr;
-    }
-
-    header {
-        height: 80px;
-        background-color: #F2B807;
-    }
-
-    .barraNav {
-        display: grid;
-        grid-template-areas:
-            "imgHeader nav nav";
-        grid-template-columns: 1fr 2fr 2fr;
-        height: 80px;
-    }
-
-    .imgHeader {
-        grid-area: imhHeader;
-        height: 80px;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 1;
-    }
-
-    nav {
-        grid-area: nav;
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 1;
-    }
-
-    header nav ul {
-        height: 80px;
-        display: flex;
-        justify-content: space-between;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        top: 0px;
-    }
-
-    nav ul li {
-        line-height: 80px;
-        margin: 0px 20px;
-    }
-
-    .logo {
-        height: 60px;
-        margin-top: 10px;
-        padding: 0px;
-    }
-
-    header nav ul li a {
-        text-decoration: none;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bolder;
-        font-size: 20px;
-        color: white;
-        text-align: center;
     }
 
     .footerGrid {
@@ -1079,8 +992,8 @@ footer {
             "cont1 cont2 cont3";
         grid-column-start: 1;
         grid-column-end: 4;
-        grid-row-start: 5;
-        grid-row-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 4;
         grid-template-columns: 1fr 1fr 1fr;
     }
 
@@ -1091,8 +1004,8 @@ footer {
             "visionTexto misionTexto";
         grid-column-start: 1;
         grid-column-end: 4;
-        grid-row-start: 6;
-        grid-row-end: 7;
+        grid-row-start: 5;
+        grid-row-end: 6;
     }
 
     .visionTitulo {
@@ -1136,7 +1049,6 @@ footer {
     .mainGridNosotros {
         display: grid;
         grid-template-areas:
-            "barraNav barraNav barraNav"
             "titulo titulo titulo"
             "subtitulo subtitulo subtitulo"
             "tituloImg tituloImg tituloImg"
@@ -1152,8 +1064,8 @@ footer {
             "nosotrosImgDos nosotrosTextoDos";
         grid-column-start: 1;
         grid-column-end: 4;
-        grid-row-start: 5;
-        grid-row-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 4;
     }
 
     .nosotrosImgUno,
@@ -1166,7 +1078,6 @@ footer {
     .mainGridProductos {
         display: grid;
         grid-template-areas:
-            "barraNav barraNav barraNav"
             "titulo titulo titulo"
             "subtitulo subtitulo subtitulo"
             "tituloImg tituloImg tituloImg"
@@ -1189,8 +1100,8 @@ footer {
             "productoTexto4 productoImg4";
         grid-column-start: 1;
         grid-column-end: 4;
-        grid-row-start: 5;
-        grid-row-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 4;
     }
 
     .productoTitulo1,
@@ -1204,7 +1115,6 @@ footer {
     .mainGridProceso {
         display: grid;
         grid-template-areas:
-            "barraNav barraNav barraNav"
             "titulo titulo titulo"
             "subtitulo subtitulo subtitulo"
             "tituloImg tituloImg tituloImg"
@@ -1230,8 +1140,8 @@ footer {
             "etapaTexto4 etapaImg4";
         grid-column-start: 1;
         grid-column-end: 4;
-        grid-row-start: 5;
-        grid-row-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 4;
     }
 
     .etapaTitulo1,
@@ -1245,7 +1155,6 @@ footer {
     .mainGridContacto {
         display: grid;
         grid-template-areas:
-            "barraNav barraNav barraNav"
             "titulo titulo titulo"
             "subtitulo subtitulo subtitulo"
             "tituloImg tituloImg tituloImg"
@@ -1272,7 +1181,7 @@ footer {
             "botones botones";
         grid-column-start: 1;
         grid-column-end: 4;
-        grid-row-start: 5;
-        grid-row-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 4;
     }
 }
