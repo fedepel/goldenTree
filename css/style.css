@@ -23,14 +23,16 @@ font-family: 'Open Sans', sans-serif;
     --secondary-color: rgb(0, 0, 48);
 }
 
-/*MOBILE FIRST - PANTALLA CELULAR*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*-------------------------------MOBILE FIRST - PANTALLA CELULAR-----------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 body {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
 }
 
-/*BARRA NAV*/
+/*--------------------------------------------BARRA NAV---------------------------------------------*/
 
 .barraNav {
     background-color: var(--main-color);
@@ -101,7 +103,7 @@ body {
     text-transform: uppercase;
 }
 
-/*FOOTER*/
+/*-----------------------------------------------FOOTER----------------------------------------------*/
 
 footer {
     background-color: var(--main-color);
@@ -117,14 +119,13 @@ footer {
         "footerCopyright"
 }
 
-/*PAGINA INDEX*/
+/*-------------------------------------------PAGINA INDEX--------------------------------------------*/
 
 .mainGrid {
     display: grid;
     grid-template-areas:
         "titulo"
-        "subtitulo"
-        "tituloImg"
+        "bajoTitulo"
         "cont1"
         "cont3"
         "cont2"
@@ -137,101 +138,107 @@ footer {
 
 .titulo {
     grid-area: titulo;
-    background: linear-gradient(153deg, rgba(89, 64, 32, 1) 57%, rgba(217, 156, 82, 1) 100%);
-    color: white;
     font-weight: bold;
     font-size: 200%;
+    width: 100%;
     margin-top: 80px;
 }
 
-.subtitulo {
-    grid-area: subtitulo;
-    color: white;
+.bajoTitulo {
+    grid-area: bajoTitulo;
     background-color: var(--secondary-color);
-    font-weight: bold;
+    border-top: var(--main-color) solid 5px;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
-.tituloImg {
-    grid-area: tituloImg;
-    margin-bottom: 2%;
-}
-
-.tituloImg img {
-    width: 100vw;
+.bajoTitulo h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 200%;
+    color: white;
 }
 
 .cont1 {
     grid-area: cont1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 5%;
-    background: rgb(242, 235, 128);
-    background: radial-gradient(circle, rgba(242, 235, 128, 1) 22%, rgba(242, 203, 7, 1) 62%, rgba(242, 184, 7, 1) 100%);
-    font-weight: bold;
-    width: 80%;
-    height: 100px;
-    margin: 2% auto 2% auto;
 }
 
 .cont2 {
     grid-area: cont2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 5%;
-    background: rgb(242, 235, 128);
-    background: radial-gradient(circle, rgba(242, 235, 128, 1) 22%, rgba(242, 203, 7, 1) 62%, rgba(242, 184, 7, 1) 100%);
-    font-weight: bold;
-    width: 80%;
-    height: 100px;
-    margin: 2% auto 2% auto;
 }
 
 .cont3 {
     grid-area: cont3;
+}
+
+.cont1,
+.cont2,
+.cont3 {
+    color: white;
+    background-color: var(--main-color);
+    z-index: 1;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 5%;
-    background: rgb(242, 235, 128);
-    background: radial-gradient(circle, rgba(242, 235, 128, 1) 22%, rgba(242, 203, 7, 1) 62%, rgba(242, 184, 7, 1) 100%);
     font-weight: bold;
     width: 80%;
-    height: 100px;
+    height: 10rem;
     margin: 2% auto 2% auto;
+    overflow: hidden;
 }
 
 .visionTitulo {
     grid-area: visionTitulo;
-    font-weight: bolder;
-    text-align: left;
-    border-bottom: 2px solid var(--main-color);
-    width: 80%;
-    margin: 2% auto 2% auto;
-}
-
-.visionTexto {
-    grid-area: visionTexto;
-    text-align: justify;
-    width: 80%;
-    margin: 2% auto 2% auto;
 }
 
 .misionTitulo {
     grid-area: misionTitulo;
-    font-weight: bolder;
-    text-align: left;
-    border-bottom: 2px solid var(--main-color);
+}
+
+.visionTitulo,
+.misionTitulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 80%;
-    margin: 2% auto 2% auto;
+    height: 3.5rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+    background-color: #f2b807;
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.3);
+    border-radius: 25px;
+}
+
+.visionTexto {
+    grid-area: visionTexto;
 }
 
 .misionTexto {
     grid-area: misionTexto;
+}
+
+.visionTexto,
+.misionTexto {
+    display: flex;
+    align-content: stretch;
+    justify-content: center;
+    font-size: 1rem;
     text-align: justify;
     width: 80%;
     margin: 2% auto 2% auto;
+    margin: 5% auto 5% auto;
+    border: #f2b807 solid 5px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.3);
+}
+
+.visionTexto p,
+.misionTexto p {
+    width: 80%;
 }
 
 .footerTexto {
@@ -256,14 +263,13 @@ footer {
     padding: 2%;
 }
 
-/*PAGINA NOSOTROS*/
+/*---------------------------------------PAGINA NOSOTROS---------------------------------------*/
 
 .mainGridNosotros {
     display: grid;
     grid-template-areas:
         "titulo"
-        "subtitulo"
-        "tituloImg"
+        "bajoTitulo"
         "nosotrosTextoUno"
         "nosotrosImgUno"
         "nosotrosTextoDos"
@@ -299,14 +305,13 @@ footer {
     grid-area: nosotrosImgDos;
 }
 
-/*PAGINA PRODUCTOS*/
+/*------------------------------------------PAGINA PRODUCTOS---------------------------------------*/
 
 .mainGridProductos {
     display: grid;
     grid-template-areas:
         "titulo"
-        "subtitulo"
-        "tituloImg"
+        "bajoTitulo"
         "producto1"
         "producto2"
         "producto3"
@@ -379,12 +384,18 @@ footer {
     grid-area: productoTitulo3;
 }
 
+.productoTitulo4 {
+    grid-area: productoTitulo4;
+}
+
 .productoTitulo1,
 .productoTitulo2,
 .productoTitulo3,
 .productoTitulo4 {
     display: flex;
+    align-items: center;
     width: 80%;
+    height: 1.5rem;
     margin-right: auto;
     margin-left: auto;
     margin-top: 5%;
@@ -399,7 +410,7 @@ footer {
 .productoTitulo3 img,
 .productoTitulo4 img {
     border-radius: 100%;
-    height: 1.3rem;
+    height: 1.2rem;
 }
 
 .productoTitulo1 h3,
@@ -408,7 +419,8 @@ footer {
 .productoTitulo4 h3 {
     color: var(--main-color);
     width: 100%;
-    text-align: center;
+    font-size: 1.2rem;
+    padding: 1rem 0 .5rem 0;
 }
 
 .productoImg1 {
@@ -458,6 +470,9 @@ footer {
 .productoTexto3,
 .productoTexto4 {
     text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 80%;
     margin-right: auto;
     margin-left: auto;
@@ -468,14 +483,13 @@ footer {
     color: white;
 }
 
-/*PAGINA PROCESO*/
+/*-----------------------------------------------PAGINA PROCESO-----------------------------------------------*/
 
 .mainGridProceso {
     display: grid;
     grid-template-areas:
         "titulo"
-        "subtitulo"
-        "tituloImg"
+        "bajoTitulo"
         "etapaTitulo1"
         "etapaImg1"
         "etapaTexto1"
@@ -602,14 +616,13 @@ footer {
     grid-area: arrow3;
 }
 
-/*PAGINA CONTACTO*/
+/*------------------------------------------PAGINA CONTACTO--------------------------------------------*/
 
 .mainGridContacto {
     display: grid;
     grid-template-areas:
         "titulo"
-        "subtitulo"
-        "tituloImg"
+        "bajoTitulo"
         "formGrid"
         "footerGrid";
 }
@@ -790,11 +803,11 @@ textarea.input {
     opacity: 1;
 }
 
-/*//////////////////////////////////////////////////////////////////////////*/
-/*---------------------------SALTO A 768------------------------------------*/
-/*//////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*--------------------------------------------SALTO A 768------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
 
     .barraNav {
         background-color: var(--main-color);
@@ -848,7 +861,7 @@ textarea.input {
 
     .menuItems li a {
         color: white;
-        font-size: 20px;
+        font-size: 15px;
         font-weight: bold;
         text-decoration: none;
         text-transform: uppercase;
@@ -902,45 +915,7 @@ textarea.input {
         grid-row-end: 5;
     }
 
-    .visionTitulo {
-        grid-area: visionTitulo;
-        font-weight: bolder;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        border-right: 5px solid #F2EB80;
-        border-bottom: none;
-        width: 80%;
-        margin: 2% 0 2% auto;
-    }
-
-    .visionTexto {
-        grid-area: visionTexto;
-        text-align: justify;
-        width: 80%;
-        margin: 2% auto 2% auto;
-    }
-
-    .misionTitulo {
-        grid-area: misionTitulo;
-        font-weight: bolder;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        border-right: 5px solid #F2EB80;
-        border-bottom: none;
-        width: 80%;
-        margin: 2% 0 2% auto;
-    }
-
-    .misionTexto {
-        grid-area: misionTexto;
-        text-align: justify;
-        width: 80%;
-        margin: 2% auto 2% auto;
-    }
-
-    /*---------------------------NOSOTROS 768-----------------------------------*/
+    /*------------------------------------------NOSOTROS 768-----------------------------------------------------*/
 
     .mainGridNosotros {
         display: grid;
@@ -971,7 +946,7 @@ textarea.input {
         justify-content: center;
     }
 
-    /*---------------------------PRODUCTOS 768-----------------------------------*/
+    /*-------------------------------------------PRODUCTOS 768----------------------------------------------*/
 
     .mainGridProductos {
         display: grid;
@@ -995,7 +970,7 @@ textarea.input {
         grid-row-end: 4;
     }
 
-    /*---------------------------PROCESO 768-----------------------------------*/
+    /*-----------------------------------------PROCESO 7682-----------------------------------------------*/
 
     .mainGridProceso {
         display: grid;
@@ -1036,7 +1011,7 @@ textarea.input {
         margin-bottom: 10px;
     }
 
-    /*---------------------------CONTACTO 768-----------------------------------*/
+    /*--------------------------------------CONTACTO 768---------------------------------------------*/
 
     .mainGridContacto {
         display: grid;
@@ -1055,11 +1030,15 @@ textarea.input {
     }
 }
 
-/*//////////////////////////////////////////////////////////////////////////*/
-/*---------------------------SALTO A 1024-----------------------------------*/
-/*//////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*-----------------------------------------SALTO A 1024------------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 @media (min-width:1024px) {
+
+    .menuItems li a {
+        font-size: 25px;
+    }
 
     .mainGrid {
         display: grid;
@@ -1104,45 +1083,7 @@ textarea.input {
         grid-row-end: 6;
     }
 
-    .visionTitulo {
-        grid-area: visionTitulo;
-        font-weight: bolder;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        border-bottom: 5px solid #F2EB80;
-        border-right: none;
-        width: 80%;
-        margin: 2% auto 2% auto;
-    }
-
-    .visionTexto {
-        grid-area: visionTexto;
-        text-align: justify;
-        width: 80%;
-        margin: 2% auto 2% auto;
-    }
-
-    .misionTitulo {
-        grid-area: misionTitulo;
-        font-weight: bolder;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        border-bottom: 5px solid #F2EB80;
-        border-right: none;
-        width: 80%;
-        margin: 2% auto 2% auto;
-    }
-
-    .misionTexto {
-        grid-area: misionTexto;
-        text-align: justify;
-        width: 80%;
-        margin: 2% auto 2% auto;
-    }
-
-    /*---------------------------NOSOTROS 1024-----------------------------------*/
+    /*--------------------------------------------------NOSOTROS 1024-------------------------------------------------*/
 
     .mainGridNosotros {
         display: grid;
@@ -1173,7 +1114,7 @@ textarea.input {
         justify-content: center;
     }
 
-    /*---------------------------PRODUCTOS 1024-----------------------------------*/
+    /*-------------------------------------------PRODUCTOS 1024---------------------------------------------*/
 
     .mainGridProductos {
         display: grid;
@@ -1266,7 +1207,7 @@ textarea.input {
     }
 
 
-    /*---------------------------PROCESO 1024-----------------------------------*/
+    /*------------------------------------------------PROCESO 1024------------------------------------------------*/
 
     .mainGridProceso {
         display: grid;
