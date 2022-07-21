@@ -875,8 +875,7 @@ textarea.input {
         display: grid;
         grid-template-areas:
             "titulo titulo"
-            "subtitulo subtitulo"
-            "tituloImg tituloImg"
+            "bajoTitulo bajoTitulo"
             "contGrid contGrid"
             "visionMisionGrid visionMisionGrid"
             "footerGrid footerGrid";
@@ -899,20 +898,20 @@ textarea.input {
             "cont3";
         grid-column-start: 1;
         grid-column-end: 3;
-        grid-row-start: 4;
-        grid-row-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
     }
 
     .visionMisionGrid {
         grid-area: visionMisionGrid;
         display: grid;
         grid-template-areas:
-            "visionTitulo visionTexto"
-            "misionTitulo misionTexto";
+            "visionTitulo misionTitulo"
+            "visionTexto misionTexto";
         grid-column-start: 1;
         grid-column-end: 3;
-        grid-row-start: 5;
-        grid-row-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 4;
     }
 
     /*------------------------------------------NOSOTROS 768-----------------------------------------------------*/
@@ -921,8 +920,7 @@ textarea.input {
         display: grid;
         grid-template-areas:
             "titulo titulo"
-            "subtitulo subtitulo"
-            "tituloImg tituloImg"
+            "bajoTitulo bajoTitulo"
             "nosotrosGrid nosotrosGrid"
             "footerGrid footerGrid";
     }
@@ -935,8 +933,8 @@ textarea.input {
             "nosotrosImgDos nosotrosTextoDos";
         grid-column-start: 1;
         grid-column-end: 3;
-        grid-row-start: 5;
-        grid-row-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 3;
     }
 
     .nosotrosImgUno,
@@ -952,8 +950,7 @@ textarea.input {
         display: grid;
         grid-template-areas:
             "titulo titulo"
-            "subtitulo subtitulo"
-            "tituloImg tituloImg"
+            "bajoTitulo bajoTitulo"
             "productosGrid productosGrid"
             "footerGrid footerGrid";
     }
@@ -966,8 +963,8 @@ textarea.input {
             "producto3 producto4";
         grid-column-start: 1;
         grid-column-end: 3;
-        grid-row-start: 4;
-        grid-row-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
     }
 
     /*-----------------------------------------PROCESO 7682-----------------------------------------------*/
@@ -976,8 +973,7 @@ textarea.input {
         display: grid;
         grid-template-areas:
             "titulo titulo"
-            "subtitulo subtitulo"
-            "tituloImg tituloImg"
+            "bajoTitulo bajoTitulo"
             "procesoGrid procesoGrid"
             "footerGrid footerGrid";
     }
@@ -999,8 +995,8 @@ textarea.input {
             "etapaTexto4 etapaImg4";
         grid-column-start: 1;
         grid-column-end: 3;
-        grid-row-start: 5;
-        grid-row-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 3;
     }
 
     .etapaTitulo1,
@@ -1017,8 +1013,7 @@ textarea.input {
         display: grid;
         grid-template-areas:
             "titulo titulo"
-            "subtitulo subtitulo"
-            "tituloImg tituloImg"
+            "bajoTitulo bajoTitulo"
             "formGrid formGrid"
             "footerGrid footerGrid";
     }
@@ -1044,8 +1039,7 @@ textarea.input {
         display: grid;
         grid-template-areas:
             "titulo titulo titulo"
-            "subtitulo subtitulo subtitulo"
-            "tituloImg tituloImg tituloImg"
+            "bajoTitulo bajoTitulo bajoTitulo"
             "contGrid contGrid contGrid"
             "visionMisionGrid visionMisionGrid visionMisionGrid"
             "footerGrid footerGrid footerGrid";
@@ -1067,8 +1061,8 @@ textarea.input {
             "cont1 cont2 cont3";
         grid-column-start: 1;
         grid-column-end: 4;
-        grid-row-start: 4;
-        grid-row-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
         grid-template-columns: 1fr 1fr 1fr;
     }
 
@@ -1079,8 +1073,8 @@ textarea.input {
             "visionTexto misionTexto";
         grid-column-start: 1;
         grid-column-end: 4;
-        grid-row-start: 5;
-        grid-row-end: 6;
+        grid-row-start: 4;
+        grid-row-end: 4;
     }
 
     /*--------------------------------------------------NOSOTROS 1024-------------------------------------------------*/
@@ -1089,8 +1083,7 @@ textarea.input {
         display: grid;
         grid-template-areas:
             "titulo titulo titulo"
-            "subtitulo subtitulo subtitulo"
-            "tituloImg tituloImg tituloImg"
+            "bajoTitulo bajoTitulo bajoTitulo"
             "nosotrosGrid nosotrosGrid nosotrosGrid"
             "footerGrid footerGrid footerGrid";
         grid-template-columns: 1fr 2fr 2fr;
@@ -1103,8 +1096,8 @@ textarea.input {
             "nosotrosImgDos nosotrosTextoDos";
         grid-column-start: 1;
         grid-column-end: 4;
-        grid-row-start: 4;
-        grid-row-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
     }
 
     .nosotrosImgUno,
@@ -1120,8 +1113,7 @@ textarea.input {
         display: grid;
         grid-template-areas:
             "titulo titulo titulo"
-            "subtitulo subtitulo subtitulo"
-            "tituloImg tituloImg tituloImg"
+            "bajoTitulo bajoTitulo bajoTitulo"
             "productoGrid productoGrid productoGrid"
             "footerGrid footerGrid footerGrid";
         grid-template-columns: 1fr 2fr 2fr;
@@ -1135,8 +1127,8 @@ textarea.input {
             "producto3 producto4";
         grid-column-start: 1;
         grid-column-end: 4;
-        grid-row-start: 4;
-        grid-row-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
     }
 
     .pUno {
@@ -1213,8 +1205,7 @@ textarea.input {
         display: grid;
         grid-template-areas:
             "titulo titulo titulo"
-            "subtitulo subtitulo subtitulo"
-            "tituloImg tituloImg tituloImg"
+            "bajoTitulo bajoTitulo bajoTitulo"
             "procesoGrid procesoGrid procesoGrid"
             "footerGrid footerGrid footerGrid";
         grid-template-columns: 1fr 2fr 2fr;
@@ -1237,8 +1228,8 @@ textarea.input {
             "etapaTexto4 etapaImg4";
         grid-column-start: 1;
         grid-column-end: 4;
-        grid-row-start: 4;
-        grid-row-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
     }
 
     .etapaTitulo1,
@@ -1253,8 +1244,7 @@ textarea.input {
         display: grid;
         grid-template-areas:
             "titulo titulo titulo"
-            "subtitulo subtitulo subtitulo"
-            "tituloImg tituloImg tituloImg"
+            "bajoTitulo bajoTitulo bajoTitulo"
             "formGrid formGrid formGrid"
             "footerGrid footerGrid footerGrid";
         grid-template-columns: 1fr 2fr 2fr;
@@ -1264,7 +1254,7 @@ textarea.input {
         grid-area: formGrid;
         grid-column-start: 1;
         grid-column-end: 4;
-        grid-row-start: 4;
-        grid-row-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
     }
 }
