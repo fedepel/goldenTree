@@ -1,5 +1,5 @@
 footer {
-    background-color: var(--main-color);
+    background-color: $main-color;
     margin-top: 5%;
     grid-area: footerGrid;
 }
@@ -34,7 +34,7 @@ footer {
 
 .footerCopyright {
     grid-area: footerCopyright;
-    background-color: var(--secondary-color);
+    background-color: $secondary-color;
     color: white;
     padding: 2%;
 }

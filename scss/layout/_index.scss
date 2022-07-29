@@ -1,0 +1,233 @@
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*-------------------------------------------PAGINA INDEX------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.mainGrid {
+    display: grid;
+    grid-template-areas:
+        "secondaryGrid"
+        "footerGrid";
+}
+
+.secondaryGrid{
+    grid-area: secondaryGrid;
+    display: grid;
+    grid-template-areas:
+    "titulo"
+    "bajoTitulo"
+    "cont1"
+    "cont2"
+    "cont3"
+    "visionTitulo"
+    "visionTexto"
+    "misionTitulo"
+    "misionTexto"
+}
+
+.titulo {
+    grid-area: titulo;
+    width: 100%;
+    margin-top: 80px;
+}
+
+.bajoTitulo {
+    grid-area: bajoTitulo;
+    background-color: $secondary-color;
+    border-top: $main-color solid 5px;
+    width: 100%;
+    margin-bottom: 15px;
+
+    h1 {
+        text-align: center;
+        width: 100%;
+        font-size: 3em;
+        color: white;
+    }
+}
+
+.cont1 {
+    grid-area: cont1;
+}
+
+.cont2 {
+    grid-area: cont2;
+}
+
+.cont3 {
+    grid-area: cont3;
+}
+
+.cont1,
+.cont2,
+.cont3 {
+    color: white;
+    font-size: 1.5em;
+    background-color: $main-color;
+    z-index: 1;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5%;
+    font-weight: bold;
+    width: 80%;
+    height: 10rem;
+    margin: 2% auto 2% auto;
+    overflow: hidden;
+}
+
+.visionTitulo {
+    grid-area: visionTitulo;
+}
+
+.misionTitulo {
+    grid-area: misionTitulo;
+}
+
+.visionTitulo,
+.misionTitulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 3.5rem;
+    margin: 5% auto 1% auto;
+    color: white;
+    background-color: $main-color;
+    box-shadow: var(--shadow);
+    border-radius: 25px;
+
+    h3 {
+        font-size: 2em;
+        font-weight: bolder;
+    }
+}
+
+.visionTexto {
+    grid-area: visionTexto;
+}
+
+.misionTexto {
+    grid-area: misionTexto;
+}
+
+.visionTexto,
+.misionTexto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    text-align: justify;
+    width: 80%;
+    margin: 2% auto 2% auto;
+    background-color: white;
+    border: $main-color solid 2px;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+
+    p {
+        width: 80%;
+        margin: 2% auto 2% auto;
+    }
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*--------------------------------------------SALTO A 768------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (min-width: 768px) {
+
+    .mainGrid {
+        grid-template-areas:
+        "secondaryGrid secondaryGrid"
+        "footerGrid footerGrid";
+}
+
+.secondaryGrid{
+    grid-template-areas:
+    "titulo titulo"
+    "bajoTitulo bajoTitulo"
+    "contGrid contGrid"
+    "visionMisionGrid visionMisionGrid"
+    "visionMisionGrid visionMisionGrid";
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+
+    .contGrid {
+        grid-area: contGrid;
+        display: grid;
+        grid-template-areas:
+            "cont1"
+            "cont2"
+            "cont3";
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .visionMisionGrid {
+        grid-area: visionMisionGrid;
+        display: grid;
+        grid-template-areas:
+            "visionTitulo misionTitulo"
+            "visionTexto misionTexto";
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*-----------------------------------------SALTO A 1024------------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (min-width:1024px) {
+
+    .mainGrid {
+        display: grid;
+        grid-template-areas:
+            "secondaryGrid secondaryGrid secondaryGrid"
+            "footerGrid footerGrid footerGrid";
+    }
+
+    .secondaryGrid{
+        grid-template-areas:
+        "titulo titulo"
+        "bajoTitulo bajoTitulo"
+        "contGrid contGrid"
+        "visionMisionGrid visionMisionGrid"
+        "visionMisionGrid visionMisionGrid";
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-template-columns: 1fr;
+    }
+
+.contGrid {
+        grid-area: contGrid;
+        display: grid;
+        grid-template-areas:
+            "cont1 cont2 cont3";
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .visionMisionGrid {
+        display: grid;
+        grid-template-areas:
+            "visionTitulo misionTitulo"
+            "visionTexto misionTexto";
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+}

@@ -5,18 +5,16 @@
   box-sizing: border-box; }
 
 :root {
-  --main-color: #f2b807;
-  --secondary-color: rgb(0, 0, 48);
   --shadow: 0 0 10px 0 rgb(0, 0, 0, 0.3)
 ; }
 
 body {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
-  background-image: url("../images/organicTiles.webp"); }
+  background-image: url("../images/climpek.png"); }
 
 .barraNav {
-  background-color: var(--main-color);
+  background-color: #f2b807;
   height: 70px;
   width: 100%;
   position: fixed;
@@ -45,7 +43,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--main-color);
+  background-color: #f2b807;
   position: fixed;
   left: 100%;
   top: 70px;
@@ -62,7 +60,7 @@ body {
     align-items: center; }
     .menuItems li:hover {
       background-color: none;
-      color: var(--secondary-color); }
+      color: #000030; }
     .menuItems li a {
       color: white;
       font-size: 25px;
@@ -75,7 +73,7 @@ body {
 
 @media (min-width: 768px) {
   .barraNav {
-    background-color: var(--main-color);
+    background-color: #f2b807;
     height: 70px;
     width: 100%;
     position: fixed;
@@ -107,7 +105,7 @@ body {
       display: flex;
       align-items: center; }
       .menuItems li:hover {
-        background-color: var(--secondary-color);
+        background-color: #000030;
         transition: 0.5s;
         border-radius: 5px; }
       .menuItems li a {
@@ -124,7 +122,7 @@ body {
     font-size: 25px; } }
 
 footer {
-  background-color: var(--main-color);
+  background-color: #f2b807;
   margin-top: 5%;
   grid-area: footerGrid; }
 
@@ -148,7 +146,7 @@ footer {
 
 .footerCopyright {
   grid-area: footerCopyright;
-  background-color: var(--secondary-color);
+  background-color: #000030;
   color: white;
   padding: 2%; }
 
@@ -164,21 +162,27 @@ footer {
     grid-template-areas: "footerTexto footerMapa" "footerCopyright footerCopyright";
     grid-template-columns: 1fr 1fr; } }
 
-/*-------------------------------------------PAGINA INDEX--------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*-------------------------------------------PAGINA INDEX------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 .mainGrid {
   display: grid;
-  grid-template-areas: "titulo" "bajoTitulo" "cont1" "cont3" "cont2" "visionTitulo" "visionTexto" "misionTitulo" "misionTexto" "footerGrid"; }
+  grid-template-areas: "secondaryGrid" "footerGrid"; }
+
+.secondaryGrid {
+  grid-area: secondaryGrid;
+  display: grid;
+  grid-template-areas: "titulo" "bajoTitulo" "cont1" "cont2" "cont3" "visionTitulo" "visionTexto" "misionTitulo" "misionTexto"; }
 
 .titulo {
   grid-area: titulo;
-  font-weight: bold;
   width: 100%;
   margin-top: 80px; }
 
 .bajoTitulo {
   grid-area: bajoTitulo;
-  background-color: var(--secondary-color);
-  border-top: var(--main-color) solid 5px;
+  background-color: #000030;
+  border-top: #f2b807 solid 5px;
   width: 100%;
   margin-bottom: 15px; }
   .bajoTitulo h1 {
@@ -201,7 +205,7 @@ footer {
 .cont3 {
   color: white;
   font-size: 1.5em;
-  background-color: var(--main-color);
+  background-color: #f2b807;
   z-index: 1;
   border-radius: 15px;
   box-shadow: var(--shadow);
@@ -230,7 +234,7 @@ footer {
   height: 3.5rem;
   margin: 5% auto 1% auto;
   color: white;
-  background-color: var(--main-color);
+  background-color: #f2b807;
   box-shadow: var(--shadow);
   border-radius: 25px; }
   .visionTitulo h3,
@@ -263,7 +267,65 @@ footer {
     width: 80%;
     margin: 2% auto 2% auto; }
 
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*--------------------------------------------SALTO A 768------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media (min-width: 768px) {
+  .mainGrid {
+    grid-template-areas: "secondaryGrid secondaryGrid" "footerGrid footerGrid"; }
+  .secondaryGrid {
+    grid-template-areas: "titulo titulo" "bajoTitulo bajoTitulo" "contGrid contGrid" "visionMisionGrid visionMisionGrid" "visionMisionGrid visionMisionGrid";
+    grid-column-start: 1;
+    grid-column-end: 3; }
+  .contGrid {
+    grid-area: contGrid;
+    display: grid;
+    grid-template-areas: "cont1" "cont2" "cont3";
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 3; }
+  .visionMisionGrid {
+    grid-area: visionMisionGrid;
+    display: grid;
+    grid-template-areas: "visionTitulo misionTitulo" "visionTexto misionTexto";
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 4; } }
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*-----------------------------------------SALTO A 1024------------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media (min-width: 1024px) {
+  .mainGrid {
+    display: grid;
+    grid-template-areas: "secondaryGrid secondaryGrid secondaryGrid" "footerGrid footerGrid footerGrid"; }
+  .secondaryGrid {
+    grid-template-areas: "titulo titulo" "bajoTitulo bajoTitulo" "contGrid contGrid" "visionMisionGrid visionMisionGrid" "visionMisionGrid visionMisionGrid";
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-template-columns: 1fr; }
+  .contGrid {
+    grid-area: contGrid;
+    display: grid;
+    grid-template-areas: "cont1 cont2 cont3";
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-template-columns: 1fr 1fr 1fr; }
+  .visionMisionGrid {
+    display: grid;
+    grid-template-areas: "visionTitulo misionTitulo" "visionTexto misionTexto";
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 4; } }
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*---------------------------------------PAGINA NOSOTROS---------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 .mainGridNosotros {
   display: grid;
   grid-template-areas: "titulo" "bajoTitulo" "nosotrosTextoUno" "nosotrosImgUno" "nosotrosTextoDos" "nosotrosImgDos" "footerGrid"; }
@@ -285,7 +347,7 @@ footer {
   width: 80%;
   margin: 2% auto 2% auto;
   background-color: white;
-  border: var(--main-color) solid 2px;
+  border: #f2b807 solid 2px;
   border-radius: 25px;
   box-shadow: var(--shadow); }
   .nosotrosTextoUno P,
@@ -297,21 +359,81 @@ footer {
   grid-area: nosotrosImgUno; }
   .nosotrosImgUno img {
     width: 70%;
-    border: var(--secondary-color) 1px;
+    border: #000030 1px;
     border-radius: 5px;
-    box-shadow: VAR(--shadow);
+    box-shadow: var(--shadow);
     margin: 5% 0 5% 0; }
 
 .nosotrosImgDos {
   grid-area: nosotrosImgDos; }
   .nosotrosImgDos img {
     width: 70%;
-    border: var(--secondary-color) 1px;
+    border: Ssecondary-color 1px;
     border-radius: 5px;
     box-shadow: VAR(--shadow);
     margin: 5% 0 5% 0; }
 
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*--------------------------------------------SALTO A 768------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media (min-width: 768px) {
+  .mainGridNosotros {
+    display: grid;
+    grid-template-areas: "secondaryGridNos secondaryGridNos" "footerGrid footerGrid"; }
+  .secondaryGridNos {
+    grid-area: secondaryGridNos;
+    grid-template-areas: "titulo titulo" "bajoTitulo bajoTitulo" "nosotrosGrid nosotrosGrid";
+    grid-column-start: 1;
+    grid-column-end: 3; }
+  .nosotrosGrid {
+    grid-area: nosotrosGrid;
+    display: grid;
+    grid-template-areas: "nosotrosTextoUno nosotrosImgUno" "nosotrosImgDos nosotrosTextoDos";
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 3; }
+  .nosotrosImgUno,
+  .nosotrosImgDos {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .nosotrosImgUno img,
+    .nosotrosImgDos img {
+      width: 90%; } }
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*-----------------------------------------SALTO A 1024------------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media (min-width: 1024px) {
+  .mainGridNosotros {
+    display: grid;
+    grid-template-areas: "secondaryGridNos secondaryGridNos secondaryGridNos" "footerGrid footerGrid footerGrid";
+    grid-template-columns: 1fr 2fr 2fr; }
+  .secondaryGridNos {
+    grid-template-areas: "titulo titulo titulo" "bajoTitulo bajoTitulo bajoTitulo" "nosotrosGrid nosotrosGrid nosotrosGrid";
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-template-columns: 1fr; }
+  .nosotrosGrid {
+    display: grid;
+    grid-template-areas: "nosotrosTextoUno nosotrosImgUno" "nosotrosImgDos nosotrosTextoDos";
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 3; }
+  .nosotrosImgUno,
+  .nosotrosImgDos {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .nosotrosImgUno img,
+  .nosotrosImgDos img {
+    width: 100%; } }
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*------------------------------------------PAGINA PRODUCTOS---------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 .mainGridProductos {
   display: grid;
   grid-template-areas: "titulo" "bajoTitulo" "producto1" "producto2" "producto3" "producto4" "footerGrid"; }
@@ -319,7 +441,7 @@ footer {
 .producto {
   width: 90%;
   overflow: hidden;
-  background-color: var(--main-color);
+  background-color: #f2b807;
   z-index: 1;
   border-radius: 15px;
   box-shadow: var(--shadow);
@@ -384,7 +506,7 @@ footer {
   .productoTitulo2 h3,
   .productoTitulo3 h3,
   .productoTitulo4 h3 {
-    color: var(--main-color);
+    color: #f2b807;
     width: 100%;
     font-size: 1.2rem;
     padding: 1rem 0 .5rem 0; }
@@ -405,7 +527,7 @@ footer {
 .productoImg2 img,
 .productoImg3 img,
 .productoImg4 img {
-  border: var(--secondary-color) 1px;
+  border: #000030 1px;
   border-radius: 5px;
   box-shadow: var(--shadow);
   margin: 5% 0 5% 0; }
@@ -443,6 +565,88 @@ footer {
     width: 80%;
     margin: 2% auto 2% auto; }
 
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*--------------------------------------------SALTO A 768------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media (min-width: 768px) {
+  .mainGridProductos {
+    display: grid;
+    grid-template-areas: "secondaryGridProd secondaryGridProd" "footerGrid footerGrid"; }
+  .secondaryGridProd {
+    grid-area: secondaryGridProd;
+    grid-template-areas: "titulo titulo" "bajoTitulo bajoTitulo" "productosGrid productosGrid";
+    grid-column-start: 1;
+    grid-column-end: 3; }
+  .productosGrid {
+    grid-area: productosGrid;
+    display: grid;
+    grid-template-areas: "producto1 producto2" "producto3 producto4";
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 3; } }
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*-----------------------------------------SALTO A 1024------------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media (min-width: 1024px) {
+  .mainGridProductos {
+    display: grid;
+    grid-template-areas: "secondaryGridProd secondaryGridProd secondaryGridProd" "footerGrid footerGrid footerGrid";
+    grid-template-columns: 1fr 2fr 2fr; }
+  .secondaryGridProd {
+    grid-template-areas: "titulo titulo titulo" "bajoTitulo bajoTitulo bajoTitulo" "productoGrid productoGrid productoGrid";
+    grid-column-start: 1;
+    grid-column-end: 4; }
+  .productosGrid {
+    display: grid;
+    grid-template-areas: "producto1 producto2" "producto3 producto4";
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 3; }
+  .pUno {
+    grid-area: producto1;
+    display: grid;
+    grid-template-areas: "productoTitulo1 productoTitulo1" "productoImg1 productoTexto1";
+    grid-template-columns: 1fr 1fr; }
+  .pDos {
+    grid-area: producto2;
+    display: grid;
+    grid-template-areas: "productoTitulo2 productoTitulo2" "productoImg2 productoTexto2";
+    grid-template-columns: 1fr 1fr; }
+  .pTres {
+    grid-area: producto3;
+    display: grid;
+    grid-template-areas: "productoTitulo3 productoTitulo3" "productoImg3 productoTexto3";
+    grid-template-columns: 1fr 1fr; }
+  .pCuatro {
+    grid-area: producto4;
+    display: grid;
+    grid-template-areas: "productoTitulo4 productoTitulo4" "productoImg4 productoTexto4";
+    grid-template-columns: 1fr 1fr; }
+  .productoTitulo1,
+  .productoTitulo2,
+  .productoTitulo3,
+  .productoTitulo4 {
+    margin: 5% auto 5% auto;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1; }
+  .productoTexto1,
+  .productoTexto2,
+  .productoTexto3,
+  .productoTexto4 {
+    width: 90%;
+    margin: 0 10px 20px 10px; }
+    .productoTexto1 img,
+    .productoTexto2 img,
+    .productoTexto3 img,
+    .productoTexto4 img {
+      width: 90%;
+      margin: 0 10px 20px 10px; } }
+
 /*-----------------------------------------------PAGINA PROCESO-----------------------------------------------*/
 .mainGridProceso {
   display: grid;
@@ -471,7 +675,7 @@ footer {
   height: 3.5rem;
   margin: 2% auto 2% auto;
   color: white;
-  background-color: var(--main-color);
+  background-color: #f2b807;
   box-shadow: var(--shadow);
   border-radius: 25px; }
 
@@ -496,7 +700,7 @@ footer {
   .etapaImg2 img,
   .etapaImg3 img,
   .etapaImg4 img {
-    border: var(--secondary-color) 1px;
+    border: #000030 1px;
     border-radius: 5px;
     box-shadow: var(--shadow);
     margin: 5% 0 5% 0; }
@@ -526,7 +730,7 @@ footer {
   width: 80%;
   margin: 2% auto 2% auto;
   background-color: white;
-  border: var(--main-color) solid 2px;
+  border: #f2b807 solid 2px;
   border-radius: 25px;
   box-shadow: var(--shadow); }
   .etapaTexto1 p,
@@ -545,7 +749,63 @@ footer {
 .arrow3 {
   grid-area: arrow3; }
 
-/*------------------------------------------PAGINA CONTACTO--------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*--------------------------------------------SALTO A 768------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media (min-width: 768px) {
+  .mainGridProceso {
+    display: grid;
+    grid-template-areas: "secondaryGridPros secondaryGridPros" "footerGrid footerGrid"; }
+  .secondaryGridPros {
+    grid-area: secondaryGridPros;
+    grid-template-areas: "titulo titulo" "bajoTitulo bajoTitulo" "procesoGrid procesoGrid";
+    grid-column-start: 1;
+    grid-column-end: 3; }
+  .procesoGrid {
+    grid-area: procesoGrid;
+    display: grid;
+    grid-template-areas: "etapaTitulo1 etapaTitulo1" "etapaImg1 etapaTexto1" "arrow1 arrow1" "etapaTitulo2 etapaTitulo2" "etapaTexto2 etapaImg2" "arrow2 arrow2" "etapaTitulo3 etapaTitulo3" "etapaImg3 etapaTexto3" "arrow3 arrow3" "etapaTitulo4 etapaTitulo4" "etapaTexto4 etapaImg4";
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 3; }
+  .etapaTitulo1,
+  .etapaTitulo2,
+  .etapaTitulo3,
+  .etapaTitulo4 {
+    width: 90%;
+    margin-bottom: 10px; } }
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*-----------------------------------------SALTO A 1024------------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media (min-width: 1024px) {
+  .mainGridProceso {
+    display: grid;
+    grid-template-areas: "secondaryGridPros secondaryGridPros secondaryGridPros" "footerGrid footerGrid footerGrid";
+    grid-template-columns: 1fr 2fr 2fr; }
+  .secondaryGridPros {
+    grid-template-areas: "titulo titulo titulo" "bajoTitulo bajoTitulo bajoTitulo" "procesoGrid procesoGrid procesoGrid";
+    grid-column-start: 1;
+    grid-column-end: 4; }
+  .procesoGrid {
+    grid-area: procesoGrid;
+    display: grid;
+    grid-template-areas: "etapaTitulo1 etapaTitulo1" "etapaImg1 etapaTexto1" "arrow1 arrow1" "etapaTitulo2 etapaTitulo2" "etapaTexto2 etapaImg2" "arrow2 arrow2" "etapaTitulo3 etapaTitulo3" "etapaImg3 etapaTexto3" "arrow3 arrow3" "etapaTitulo4 etapaTitulo4" "etapaTexto4 etapaImg4";
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 3; }
+  .etapaTitulo1,
+  .etapaTitulo2,
+  .etapaTitulo3,
+  .etapaTitulo4 {
+    width: 90%;
+    margin-bottom: 10px; } }
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*------------------------------------------PAGINA CONTACTO----------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 .mainGridContacto {
   display: grid;
   grid-template-areas: "titulo" "bajoTitulo" "formGrid" "footerGrid"; }
@@ -562,7 +822,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--main-color);
+  background-color: #f2b807;
   z-index: 1;
   border-radius: 15px;
   box-shadow: var(--shadow); }
@@ -571,7 +831,7 @@ footer {
     position: absolute;
     width: 26px;
     height: 26px;
-    background-color: var(--secondary-color);
+    background-color: #000030;
     transform: rotate(45deg);
     top: 50px;
     left: -13px; }
@@ -621,7 +881,7 @@ form {
       opacity: 0;
       transition: 0.3s;
       height: 5px;
-      background-color: var(--main-color);
+      background-color: #f2b807;
       top: 50%;
       transform: translateY(-50%); }
 
@@ -651,7 +911,7 @@ textarea.input {
 
 .btn {
   padding: 0.6rem 1.3rem;
-  background-color: var(--secondary-color);
+  background-color: #000030;
   border: 2px solid white;
   font-size: 0.95rem;
   color: white;
@@ -686,79 +946,14 @@ textarea.input {
 /*--------------------------------------------SALTO A 768------------------------------------------*/
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 768px) {
-  .mainGrid {
-    display: grid;
-    grid-template-areas: "titulo titulo" "bajoTitulo bajoTitulo" "contGrid contGrid" "visionMisionGrid visionMisionGrid" "footerGrid footerGrid"; }
-  .contGrid {
-    grid-area: contGrid;
-    display: grid;
-    grid-template-areas: "cont1" "cont2" "cont3";
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 3; }
-  .visionMisionGrid {
-    grid-area: visionMisionGrid;
-    display: grid;
-    grid-template-areas: "visionTitulo misionTitulo" "visionTexto misionTexto";
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 4;
-    grid-row-end: 4; }
-  /*------------------------------------------NOSOTROS 768-----------------------------------------------------*/
-  .mainGridNosotros {
-    display: grid;
-    grid-template-areas: "titulo titulo" "bajoTitulo bajoTitulo" "nosotrosGrid nosotrosGrid" "footerGrid footerGrid"; }
-  .nosotrosGrid {
-    grid-area: nosotrosGrid;
-    display: grid;
-    grid-template-areas: "nosotrosTextoUno nosotrosImgUno" "nosotrosImgDos nosotrosTextoDos";
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 3; }
-  .nosotrosImgUno,
-  .nosotrosImgDos {
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-    .nosotrosImgUno img,
-    .nosotrosImgDos img {
-      width: 90%; }
-  /*-------------------------------------------PRODUCTOS 768----------------------------------------------*/
-  .mainGridProductos {
-    display: grid;
-    grid-template-areas: "titulo titulo" "bajoTitulo bajoTitulo" "productosGrid productosGrid" "footerGrid footerGrid"; }
-  .productosGrid {
-    grid-area: productosGrid;
-    display: grid;
-    grid-template-areas: "producto1 producto2" "producto3 producto4";
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 3; }
-  /*-----------------------------------------PROCESO 7682-----------------------------------------------*/
-  .mainGridProceso {
-    display: grid;
-    grid-template-areas: "titulo titulo" "bajoTitulo bajoTitulo" "procesoGrid procesoGrid" "footerGrid footerGrid"; }
-  .procesoGrid {
-    grid-area: procesoGrid;
-    display: grid;
-    grid-template-areas: "etapaTitulo1 etapaTitulo1" "etapaImg1 etapaTexto1" "arrow1 arrow1" "etapaTitulo2 etapaTitulo2" "etapaTexto2 etapaImg2" "arrow2 arrow2" "etapaTitulo3 etapaTitulo3" "etapaImg3 etapaTexto3" "arrow3 arrow3" "etapaTitulo4 etapaTitulo4" "etapaTexto4 etapaImg4";
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 3; }
-  .etapaTitulo1,
-  .etapaTitulo2,
-  .etapaTitulo3,
-  .etapaTitulo4 {
-    width: 90%;
-    margin-bottom: 10px; }
-  /*--------------------------------------CONTACTO 768---------------------------------------------*/
   .mainGridContacto {
     display: grid;
-    grid-template-areas: "titulo titulo" "bajoTitulo bajoTitulo" "formGrid formGrid" "footerGrid footerGrid"; }
+    grid-template-areas: "secondaryGridCont secondaryGridCont" "footerGrid footerGrid"; }
+  .secondaryGridCont {
+    grid-area: secondaryGridCont;
+    grid-template-areas: "titulo titulo" "bajoTitulo bajoTitulo" "formGrid formGrid";
+    grid-column-start: 1;
+    grid-column-end: 3; }
   .formGrid {
     grid-area: formGrid;
     grid-column-start: 1;
@@ -768,123 +963,14 @@ textarea.input {
 /*-----------------------------------------SALTO A 1024------------------------------------------------*/
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 1024px) {
-  .mainGrid {
-    display: grid;
-    grid-template-areas: "titulo titulo titulo" "bajoTitulo bajoTitulo bajoTitulo" "contGrid contGrid contGrid" "visionMisionGrid visionMisionGrid visionMisionGrid" "footerGrid footerGrid footerGrid";
-    grid-template-columns: 1fr 2fr 2fr; }
-  .contGrid {
-    grid-area: contGrid;
-    display: grid;
-    grid-template-areas: "cont1 cont2 cont3";
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 3;
-    grid-template-columns: 1fr 1fr 1fr; }
-  .visionMisionGrid {
-    display: grid;
-    grid-template-areas: "visionTitulo misionTitulo" "visionTexto misionTexto";
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 4; }
-  /*--------------------------------------------------NOSOTROS 1024-------------------------------------------------*/
-  .mainGridNosotros {
-    display: grid;
-    grid-template-areas: "titulo titulo titulo" "bajoTitulo bajoTitulo bajoTitulo" "nosotrosGrid nosotrosGrid nosotrosGrid" "footerGrid footerGrid footerGrid";
-    grid-template-columns: 1fr 2fr 2fr; }
-  .nosotrosGrid {
-    display: grid;
-    grid-template-areas: "nosotrosTextoUno nosotrosImgUno" "nosotrosImgDos nosotrosTextoDos";
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 3; }
-  .nosotrosImgUno,
-  .nosotrosImgDos {
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-  .nosotrosImgUno img,
-  .nosotrosImgDos img {
-    width: 100%; }
-  /*-------------------------------------------PRODUCTOS 1024---------------------------------------------*/
-  .mainGridProductos {
-    display: grid;
-    grid-template-areas: "titulo titulo titulo" "bajoTitulo bajoTitulo bajoTitulo" "productoGrid productoGrid productoGrid" "footerGrid footerGrid footerGrid";
-    grid-template-columns: 1fr 2fr 2fr; }
-  .productosGrid {
-    grid-area: productosGrid;
-    display: grid;
-    grid-template-areas: "producto1 producto2" "producto3 producto4";
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 3; }
-  .pUno {
-    grid-area: producto1;
-    display: grid;
-    grid-template-areas: "productoTitulo1 productoTitulo1" "productoImg1 productoTexto1";
-    grid-template-columns: 1fr 1fr; }
-  .pDos {
-    grid-area: producto2;
-    display: grid;
-    grid-template-areas: "productoTitulo2 productoTitulo2" "productoImg2 productoTexto2";
-    grid-template-columns: 1fr 1fr; }
-  .pTres {
-    grid-area: producto3;
-    display: grid;
-    grid-template-areas: "productoTitulo3 productoTitulo3" "productoImg3 productoTexto3";
-    grid-template-columns: 1fr 1fr; }
-  .pCuatro {
-    grid-area: producto4;
-    display: grid;
-    grid-template-areas: "productoTitulo4 productoTitulo4" "productoImg4 productoTexto4";
-    grid-template-columns: 1fr 1fr; }
-  .productoTitulo1,
-  .productoTitulo2,
-  .productoTitulo3,
-  .productoTitulo4 {
-    margin: 5% auto 5% auto;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 1; }
-  .productoTexto1,
-  .productoTexto2,
-  .productoTexto3,
-  .productoTexto4 {
-    width: 90%;
-    margin: 0 10px 20px 10px; }
-    .productoTexto1 img,
-    .productoTexto2 img,
-    .productoTexto3 img,
-    .productoTexto4 img {
-      width: 90%;
-      margin: 0 10px 20px 10px; }
-  /*------------------------------------------------PROCESO 1024------------------------------------------------*/
-  .mainGridProceso {
-    display: grid;
-    grid-template-areas: "titulo titulo titulo" "bajoTitulo bajoTitulo bajoTitulo" "procesoGrid procesoGrid procesoGrid" "footerGrid footerGrid footerGrid";
-    grid-template-columns: 1fr 2fr 2fr; }
-  .procesoGrid {
-    grid-area: procesoGrid;
-    display: grid;
-    grid-template-areas: "etapaTitulo1 etapaTitulo1" "etapaImg1 etapaTexto1" "arrow1 arrow1" "etapaTitulo2 etapaTitulo2" "etapaTexto2 etapaImg2" "arrow2 arrow2" "etapaTitulo3 etapaTitulo3" "etapaImg3 etapaTexto3" "arrow3 arrow3" "etapaTitulo4 etapaTitulo4" "etapaTexto4 etapaImg4";
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 3; }
-  .etapaTitulo1,
-  .etapaTitulo2,
-  .etapaTitulo3,
-  .etapaTitulo4 {
-    width: 90%;
-    margin-bottom: 10px; }
   .mainGridContacto {
     display: grid;
-    grid-template-areas: "titulo titulo titulo" "bajoTitulo bajoTitulo bajoTitulo" "formGrid formGrid formGrid" "footerGrid footerGrid footerGrid";
+    grid-template-areas: "secondaryGridCont secondaryGridCont secondaryGridCont" "footerGrid footerGrid footerGrid";
     grid-template-columns: 1fr 2fr 2fr; }
+  .secondaryGridCont {
+    grid-template-areas: "titulo titulo titulo" "bajoTitulo bajoTitulo bajoTitulo" "formGrid formGrid formGrid";
+    grid-column-start: 1;
+    grid-column-end: 4; }
   .formGrid {
     grid-area: formGrid;
     grid-column-start: 1;

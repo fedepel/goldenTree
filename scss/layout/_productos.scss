@@ -1,0 +1,307 @@
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*------------------------------------------PAGINA PRODUCTOS---------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.mainGridProductos {
+    display: grid;
+    grid-template-areas:
+        "titulo"
+        "bajoTitulo"
+        "producto1"
+        "producto2"
+        "producto3"
+        "producto4"
+        "footerGrid";
+}
+
+.producto {
+    width: 90%;
+    overflow: hidden;
+    background-color: $main-color;
+    z-index: 1;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.pUno {
+    grid-area: producto1;
+    display: grid;
+    grid-template-areas:
+        "productoTitulo1"
+        "productoImg1"
+        "productoTexto1"
+    ;
+}
+
+.pDos {
+    grid-area: producto2;
+    display: grid;
+    grid-template-areas:
+        "productoTitulo2"
+        "productoImg2"
+        "productoTexto2"
+    ;
+}
+
+.pTres {
+    grid-area: producto3;
+    display: grid;
+    grid-template-areas:
+        "productoTitulo3"
+        "productoImg3"
+        "productoTexto3"
+    ;
+}
+
+.pCuatro {
+    grid-area: producto4;
+    display: grid;
+    grid-template-areas:
+        "productoTitulo4"
+        "productoImg4"
+        "productoTexto4"
+    ;
+}
+
+
+.productoTitulo1 {
+    grid-area: productoTitulo1;
+}
+
+.productoTitulo2 {
+    grid-area: productoTitulo2;
+}
+
+.productoTitulo3 {
+    grid-area: productoTitulo3;
+}
+
+.productoTitulo4 {
+    grid-area: productoTitulo4;
+}
+
+.productoTitulo1,
+.productoTitulo2,
+.productoTitulo3,
+.productoTitulo4 {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+    background-color: white;
+    border: 2px solid white;
+    line-height: 1;
+    border-radius: 25px;
+    img{
+        border-radius: 100%;
+        height: 1.2rem;
+    }
+    h3 {
+        color: $main-color;
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 1rem 0 .5rem 0;
+    }
+}
+
+.productoImg1 {
+    grid-area: productoImg1;
+}
+
+.productoImg2 {
+    grid-area: productoImg2;
+}
+
+.productoImg3 {
+    grid-area: productoImg3;
+}
+
+.productoImg4 {
+    grid-area: productoImg4;
+}
+
+.productoImg1 img,
+.productoImg2 img,
+.productoImg3 img,
+.productoImg4 img {
+    border: $secondary-color 1px;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    margin: 5% 0 5% 0;
+}
+
+.productoTexto1 {
+    grid-area: productoTexto1;
+}
+
+.productoTexto2 {
+    grid-area: productoTexto2;
+}
+
+.productoTexto3 {
+    grid-area: productoTexto3;
+}
+
+.productoTexto4 {
+    grid-area: productoTexto4;
+}
+
+.productoTexto1,
+.productoTexto2,
+.productoTexto3,
+.productoTexto4 {
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 2% auto 2% auto;
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 15px;
+    color: white;
+    p {
+        width: 80%;
+        margin: 2% auto 2% auto;
+    }
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*--------------------------------------------SALTO A 768------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (min-width: 768px) {
+
+    .mainGridProductos {
+        display: grid;
+        grid-template-areas:
+            "secondaryGridProd secondaryGridProd"
+            "footerGrid footerGrid";
+    }
+
+    .secondaryGridProd {
+        grid-area: secondaryGridProd;
+        grid-template-areas:
+        "titulo titulo"
+        "bajoTitulo bajoTitulo"
+        "productosGrid productosGrid";
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .productosGrid {
+        grid-area: productosGrid;
+        display: grid;
+        grid-template-areas:
+            "producto1 producto2"
+            "producto3 producto4";
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*-----------------------------------------SALTO A 1024------------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (min-width:1024px) {
+
+    .mainGridProductos {
+        display: grid;
+        grid-template-areas:
+            "secondaryGridProd secondaryGridProd secondaryGridProd"
+            "footerGrid footerGrid footerGrid";
+        grid-template-columns: 1fr 2fr 2fr;
+    }
+
+    .secondaryGridProd {
+        grid-template-areas:
+        "titulo titulo titulo"
+        "bajoTitulo bajoTitulo bajoTitulo"
+        "productoGrid productoGrid productoGrid";
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .productosGrid {
+        display: grid;
+        grid-template-areas:
+            "producto1 producto2"
+            "producto3 producto4";
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .pUno {
+        grid-area: producto1;
+        display: grid;
+        grid-template-areas:
+            "productoTitulo1 productoTitulo1"
+            "productoImg1 productoTexto1"
+        ;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pDos {
+        grid-area: producto2;
+        display: grid;
+        grid-template-areas:
+            "productoTitulo2 productoTitulo2"
+            "productoImg2 productoTexto2"
+        ;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pTres {
+        grid-area: producto3;
+        display: grid;
+        grid-template-areas:
+            "productoTitulo3 productoTitulo3"
+            "productoImg3 productoTexto3"
+        ;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pCuatro {
+        grid-area: producto4;
+        display: grid;
+        grid-template-areas:
+            "productoTitulo4 productoTitulo4"
+            "productoImg4 productoTexto4"
+        ;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .productoTitulo1,
+    .productoTitulo2,
+    .productoTitulo3,
+    .productoTitulo4 {
+        margin: 5% auto 5% auto;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .productoTexto1,
+    .productoTexto2,
+    .productoTexto3,
+    .productoTexto4 {
+        width: 90%;
+        margin: 0 10px 20px 10px;
+        img {
+            width: 90%;
+            margin: 0 10px 20px 10px;
+        }
+    }
+}

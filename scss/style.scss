@@ -1,7 +1,13 @@
-@import "../scss/util/util";
+@import "./util/util";
+@import "./util/variables";
+@import "./util/extend";
+@import "./util/mixin";
 
-@import "../scss/layout/_header.scss";
+@import "./layout/header";
+@import "./layout/footer";
 
-@import "../scss/layout/footer";
-
-@import "../scss/layout/body";
+@import "./layout/index";
+@import "./layout/nosotros";
+@import "./layout/productos";
+@import "./layout/proceso";
+@import "./layout/contacto";

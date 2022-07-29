@@ -1,0 +1,162 @@
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*---------------------------------------PAGINA NOSOTROS---------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.mainGridNosotros {
+    display: grid;
+    grid-template-areas:
+        "titulo"
+        "bajoTitulo"
+        "nosotrosTextoUno"
+        "nosotrosImgUno"
+        "nosotrosTextoDos"
+        "nosotrosImgDos"
+        "footerGrid";
+}
+
+.nosotrosTextoUno {
+    grid-area: nosotrosTextoUno;
+}
+
+.nosotrosTextoDos {
+    grid-area: nosotrosTextoDos;
+}
+
+.nosotrosTextoUno,
+.nosotrosTextoDos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    text-align: justify;
+    width: 80%;
+    margin: 2% auto 2% auto;
+    background-color: white;
+    border: $main-color solid 2px;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+
+    P {
+        width: 80%;
+        margin: 2% auto 2% auto;
+    }
+}
+
+.nosotrosImgUno {
+    grid-area: nosotrosImgUno;
+
+    img {
+        width: 70%;
+        border: $secondary-color 1px;
+        border-radius: 5px;
+        box-shadow: var(--shadow);
+        margin: 5% 0 5% 0;
+    }
+}
+
+.nosotrosImgDos {
+    grid-area: nosotrosImgDos;
+
+    img {
+        width: 70%;
+        border: Ssecondary-color 1px;
+        border-radius: 5px;
+        box-shadow: VAR(--shadow);
+        margin: 5% 0 5% 0;
+    }
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*--------------------------------------------SALTO A 768------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (min-width: 768px) {
+
+    .mainGridNosotros {
+        display: grid;
+        grid-template-areas:
+            "secondaryGridNos secondaryGridNos"
+            "footerGrid footerGrid";
+    }
+
+    .secondaryGridNos {
+        grid-area: secondaryGridNos;
+        grid-template-areas:
+        "titulo titulo"
+        "bajoTitulo bajoTitulo"
+        "nosotrosGrid nosotrosGrid";
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .nosotrosGrid {
+        grid-area: nosotrosGrid;
+        display: grid;
+        grid-template-areas:
+            "nosotrosTextoUno nosotrosImgUno"
+            "nosotrosImgDos nosotrosTextoDos";
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .nosotrosImgUno,
+    .nosotrosImgDos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 90%;
+        }
+    }
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*-----------------------------------------SALTO A 1024------------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (min-width:1024px) {
+
+    .mainGridNosotros {
+        display: grid;
+        grid-template-areas:
+            "secondaryGridNos secondaryGridNos secondaryGridNos"
+            "footerGrid footerGrid footerGrid";
+        grid-template-columns: 1fr 2fr 2fr;
+    }
+
+    .secondaryGridNos {
+        grid-template-areas:
+        "titulo titulo titulo"
+        "bajoTitulo bajoTitulo bajoTitulo"
+        "nosotrosGrid nosotrosGrid nosotrosGrid";
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-template-columns: 1fr;
+    }
+
+    .nosotrosGrid {
+        display: grid;
+        grid-template-areas:
+            "nosotrosTextoUno nosotrosImgUno"
+            "nosotrosImgDos nosotrosTextoDos";
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .nosotrosImgUno,
+    .nosotrosImgDos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nosotrosImgUno img,
+    .nosotrosImgDos img {
+        width: 100%;
+    }
+}
