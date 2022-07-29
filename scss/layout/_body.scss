@@ -1,0 +1,1043 @@
+/*-------------------------------------------PAGINA INDEX--------------------------------------------*/
+
+.mainGrid {
+    display: grid;
+    grid-template-areas:
+        "titulo"
+        "bajoTitulo"
+        "cont1"
+        "cont3"
+        "cont2"
+        "visionTitulo"
+        "visionTexto"
+        "misionTitulo"
+        "misionTexto"
+        "footerGrid";
+}
+
+.titulo {
+    grid-area: titulo;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 80px;
+}
+
+.bajoTitulo {
+    grid-area: bajoTitulo;
+    background-color: var(--secondary-color);
+    border-top: var(--main-color) solid 5px;
+    width: 100%;
+    margin-bottom: 15px;
+
+    h1 {
+        text-align: center;
+        width: 100%;
+        font-size: 3em;
+        color: white;
+    }
+}
+
+.cont1 {
+    grid-area: cont1;
+}
+
+.cont2 {
+    grid-area: cont2;
+}
+
+.cont3 {
+    grid-area: cont3;
+}
+
+.cont1,
+.cont2,
+.cont3 {
+    color: white;
+    font-size: 1.5em;
+    background-color: var(--main-color);
+    z-index: 1;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5%;
+    font-weight: bold;
+    width: 80%;
+    height: 10rem;
+    margin: 2% auto 2% auto;
+    overflow: hidden;
+}
+
+.visionTitulo {
+    grid-area: visionTitulo;
+}
+
+.misionTitulo {
+    grid-area: misionTitulo;
+}
+
+.visionTitulo,
+.misionTitulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 3.5rem;
+    margin: 5% auto 1% auto;
+    color: white;
+    background-color: var(--main-color);
+    box-shadow: var(--shadow);
+    border-radius: 25px;
+
+    h3 {
+        font-size: 2em;
+        font-weight: bolder;
+    }
+}
+
+.visionTexto {
+    grid-area: visionTexto;
+}
+
+.misionTexto {
+    grid-area: misionTexto;
+}
+
+.visionTexto,
+.misionTexto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    text-align: justify;
+    width: 80%;
+    margin: 2% auto 2% auto;
+    background-color: white;
+    border: #f2b807 solid 2px;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+
+    p {
+        width: 80%;
+        margin: 2% auto 2% auto;
+    }
+}
+
+/*---------------------------------------PAGINA NOSOTROS---------------------------------------*/
+
+.mainGridNosotros {
+    display: grid;
+    grid-template-areas:
+        "titulo"
+        "bajoTitulo"
+        "nosotrosTextoUno"
+        "nosotrosImgUno"
+        "nosotrosTextoDos"
+        "nosotrosImgDos"
+        "footerGrid";
+}
+
+.nosotrosTextoUno {
+    grid-area: nosotrosTextoUno;
+}
+
+.nosotrosTextoDos {
+    grid-area: nosotrosTextoDos;
+}
+
+.nosotrosTextoUno,
+.nosotrosTextoDos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    text-align: justify;
+    width: 80%;
+    margin: 2% auto 2% auto;
+    background-color: white;
+    border: var(--main-color) solid 2px;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+
+    P {
+        width: 80%;
+        margin: 2% auto 2% auto;
+    }
+}
+
+.nosotrosImgUno {
+    grid-area: nosotrosImgUno;
+
+    img {
+        width: 70%;
+        border: var(--secondary-color) 1px;
+        border-radius: 5px;
+        box-shadow: VAR(--shadow);
+        margin: 5% 0 5% 0;
+    }
+}
+
+.nosotrosImgDos {
+    grid-area: nosotrosImgDos;
+
+    img {
+        width: 70%;
+        border: var(--secondary-color) 1px;
+        border-radius: 5px;
+        box-shadow: VAR(--shadow);
+        margin: 5% 0 5% 0;
+    }
+}
+
+/*------------------------------------------PAGINA PRODUCTOS---------------------------------------*/
+
+.mainGridProductos {
+    display: grid;
+    grid-template-areas:
+        "titulo"
+        "bajoTitulo"
+        "producto1"
+        "producto2"
+        "producto3"
+        "producto4"
+        "footerGrid";
+}
+
+.producto {
+    width: 90%;
+    overflow: hidden;
+    background-color: var(--main-color);
+    z-index: 1;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.pUno {
+    grid-area: producto1;
+    display: grid;
+    grid-template-areas:
+        "productoTitulo1"
+        "productoImg1"
+        "productoTexto1"
+    ;
+}
+
+.pDos {
+    grid-area: producto2;
+    display: grid;
+    grid-template-areas:
+        "productoTitulo2"
+        "productoImg2"
+        "productoTexto2"
+    ;
+}
+
+.pTres {
+    grid-area: producto3;
+    display: grid;
+    grid-template-areas:
+        "productoTitulo3"
+        "productoImg3"
+        "productoTexto3"
+    ;
+}
+
+.pCuatro {
+    grid-area: producto4;
+    display: grid;
+    grid-template-areas:
+        "productoTitulo4"
+        "productoImg4"
+        "productoTexto4"
+    ;
+}
+
+
+.productoTitulo1 {
+    grid-area: productoTitulo1;
+}
+
+.productoTitulo2 {
+    grid-area: productoTitulo2;
+}
+
+.productoTitulo3 {
+    grid-area: productoTitulo3;
+}
+
+.productoTitulo4 {
+    grid-area: productoTitulo4;
+}
+
+.productoTitulo1,
+.productoTitulo2,
+.productoTitulo3,
+.productoTitulo4 {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+    background-color: white;
+    border: 2px solid white;
+    line-height: 1;
+    border-radius: 25px;
+    img{
+        border-radius: 100%;
+        height: 1.2rem;
+    }
+    h3 {
+        color: var(--main-color);
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 1rem 0 .5rem 0;
+    }
+}
+
+.productoImg1 {
+    grid-area: productoImg1;
+}
+
+.productoImg2 {
+    grid-area: productoImg2;
+}
+
+.productoImg3 {
+    grid-area: productoImg3;
+}
+
+.productoImg4 {
+    grid-area: productoImg4;
+}
+
+.productoImg1 img,
+.productoImg2 img,
+.productoImg3 img,
+.productoImg4 img {
+    border: var(--secondary-color) 1px;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    margin: 5% 0 5% 0;
+}
+
+.productoTexto1 {
+    grid-area: productoTexto1;
+}
+
+.productoTexto2 {
+    grid-area: productoTexto2;
+}
+
+.productoTexto3 {
+    grid-area: productoTexto3;
+}
+
+.productoTexto4 {
+    grid-area: productoTexto4;
+}
+
+.productoTexto1,
+.productoTexto2,
+.productoTexto3,
+.productoTexto4 {
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 2% auto 2% auto;
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 15px;
+    color: white;
+    p {
+        width: 80%;
+        margin: 2% auto 2% auto;
+    }
+}
+
+/*-----------------------------------------------PAGINA PROCESO-----------------------------------------------*/
+
+.mainGridProceso {
+    display: grid;
+    grid-template-areas:
+        "titulo"
+        "bajoTitulo"
+        "etapaTitulo1"
+        "etapaImg1"
+        "etapaTexto1"
+        "arrow1"
+        "etapaTitulo2"
+        "etapaImg2"
+        "etapaTexto2"
+        "arrow2"
+        "etapaTitulo3"
+        "etapaImg3"
+        "etapaTexto3"
+        "arrow3"
+        "etapaTitulo4"
+        "etapaImg4"
+        "etapaTexto4"
+        "footerGrid";
+}
+
+.etapaTitulo1 {
+    grid-area: etapaTitulo1;
+}
+
+.etapaTitulo2 {
+    grid-area: etapaTitulo2;
+}
+
+.etapaTitulo3 {
+    grid-area: etapaTitulo3;
+}
+
+.etapaTitulo4 {
+    grid-area: etapaTitulo4;
+}
+
+.etapaTitulo1,
+.etapaTitulo2,
+.etapaTitulo3,
+.etapaTitulo4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 3.5rem;
+    margin: 2% auto 2% auto;
+    color: white;
+    background-color: var(--main-color);
+    box-shadow: var(--shadow);
+    border-radius: 25px;
+}
+
+.etapaImg1 {
+    grid-area: etapaImg1;
+}
+
+.etapaImg2 {
+    grid-area: etapaImg2;
+}
+
+.etapaImg3 {
+    grid-area: etapaImg3;
+}
+
+
+.etapaImg4 {
+    grid-area: etapaImg4;
+}
+
+.etapaImg1,
+.etapaImg2,
+.etapaImg3,
+.etapaImg4 {
+    margin: 2% auto 2% auto;
+    img {
+        border: var(--secondary-color) 1px;
+        border-radius: 5px;
+        box-shadow: var(--shadow);
+        margin: 5% 0 5% 0;
+    }
+}
+
+.etapaTexto1 {
+    grid-area: etapaTexto1;
+}
+
+
+.etapaTexto2 {
+    grid-area: etapaTexto2;
+}
+
+.etapaTexto3 {
+    grid-area: etapaTexto3;
+}
+
+
+.etapaTexto4 {
+    grid-area: etapaTexto4;
+}
+
+.etapaTexto1,
+.etapaTexto2,
+.etapaTexto3,
+.etapaTexto4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    text-align: justify;
+    width: 80%;
+    margin: 2% auto 2% auto;
+    background-color: white;
+    border: var(--main-color) solid 2px;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+    p {
+        width: 80%;
+        margin: 2% auto 2% auto;
+    }
+}
+
+.arrow1 {
+    grid-area: arrow1;
+}
+
+.arrow2 {
+    grid-area: arrow2;
+}
+
+.arrow3 {
+    grid-area: arrow3;
+}
+
+/*------------------------------------------PAGINA CONTACTO--------------------------------------------*/
+
+.mainGridContacto {
+    display: grid;
+    grid-template-areas:
+        "titulo"
+        "bajoTitulo"
+        "formGrid"
+        "footerGrid";
+}
+
+.formGrid {
+    grid-area: formGrid;
+    display: flex;
+    justify-content: center;
+}
+
+.contactForm {
+    position: relative;
+    width: 90%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+    z-index: 1;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    &:before {
+        content: "";
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        background-color: var(--secondary-color);
+        transform: rotate(45deg);
+        top: 50px;
+        left: -13px;
+    }
+}
+
+form {
+    padding: 2.3rem 2.2rem;
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+}
+
+.title {
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-bottom: 0.7rem;
+    text-align: left;
+}
+
+.inputContainer {
+    position: relative;
+    margin: 1rem 0;
+    label {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        padding: 0 0.4rem;
+        color: white;
+        font-size: 0.9rem;
+        font-weight: 400;
+        pointer-events: none;
+        transition: 0.5s;
+        z-index: 2;
+    }
+    span {
+        position: absolute;
+        top: 0;
+        left: 25px;
+        transform: translateY(-50%);
+        font-size: 0.8rem;
+        padding: 0 0.4rem;
+        color: transparent;
+        pointer-events: none;
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            width: 10%;
+            opacity: 0;
+            transition: 0.3s;
+            height: 5px;
+            background-color: var(--main-color);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.input {
+    width: 100%;
+    outline: none;
+    border: 2px solid white;
+    background: none;
+    padding: 0.6rem 1.2rem;
+    color: white;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+textarea.input {
+    padding: 0.8rem 1.2rem;
+    min-height: 150px;
+    border-radius: 22px;
+    resize: none;
+    overflow-y: auto;
+}
+
+.inputContainer.textarea label {
+    top: 1rem;
+    transform: translateY(0);
+}
+
+.btn {
+    padding: 0.6rem 1.3rem;
+    background-color: var(--secondary-color);
+    border: 2px solid white;
+    font-size: 0.95rem;
+    color: white;
+    line-height: 1;
+    border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0;
+    &:hover {
+        background-color: transparent;
+        color: white;
+    }
+}
+
+.inputContainer span:before {
+    left: 50%;
+}
+
+.inputContainer span:after {
+    right: 50%;
+}
+
+.inputContainer.focus label {
+    top: 0;
+    transform: translateY(-50%);
+    left: 25px;
+    font-size: 0.8rem;
+}
+
+.inputContainer.focus span:before,
+.inputContainer.focus span:after {
+    width: 50%;
+    opacity: 1;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*--------------------------------------------SALTO A 768------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (min-width: 768px) {
+
+    .mainGrid {
+        display: grid;
+        grid-template-areas:
+            "titulo titulo"
+            "bajoTitulo bajoTitulo"
+            "contGrid contGrid"
+            "visionMisionGrid visionMisionGrid"
+            "footerGrid footerGrid";
+    }
+
+    .contGrid {
+        grid-area: contGrid;
+        display: grid;
+        grid-template-areas:
+            "cont1"
+            "cont2"
+            "cont3";
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .visionMisionGrid {
+        grid-area: visionMisionGrid;
+        display: grid;
+        grid-template-areas:
+            "visionTitulo misionTitulo"
+            "visionTexto misionTexto";
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    /*------------------------------------------NOSOTROS 768-----------------------------------------------------*/
+
+    .mainGridNosotros {
+        display: grid;
+        grid-template-areas:
+            "titulo titulo"
+            "bajoTitulo bajoTitulo"
+            "nosotrosGrid nosotrosGrid"
+            "footerGrid footerGrid";
+    }
+
+    .nosotrosGrid {
+        grid-area: nosotrosGrid;
+        display: grid;
+        grid-template-areas:
+            "nosotrosTextoUno nosotrosImgUno"
+            "nosotrosImgDos nosotrosTextoDos";
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .nosotrosImgUno,
+    .nosotrosImgDos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 90%;
+        }
+    }
+
+    /*-------------------------------------------PRODUCTOS 768----------------------------------------------*/
+
+    .mainGridProductos {
+        display: grid;
+        grid-template-areas:
+            "titulo titulo"
+            "bajoTitulo bajoTitulo"
+            "productosGrid productosGrid"
+            "footerGrid footerGrid";
+    }
+
+    .productosGrid {
+        grid-area: productosGrid;
+        display: grid;
+        grid-template-areas:
+            "producto1 producto2"
+            "producto3 producto4";
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    /*-----------------------------------------PROCESO 7682-----------------------------------------------*/
+
+    .mainGridProceso {
+        display: grid;
+        grid-template-areas:
+            "titulo titulo"
+            "bajoTitulo bajoTitulo"
+            "procesoGrid procesoGrid"
+            "footerGrid footerGrid";
+    }
+
+    .procesoGrid {
+        grid-area: procesoGrid;
+        display: grid;
+        grid-template-areas:
+            "etapaTitulo1 etapaTitulo1"
+            "etapaImg1 etapaTexto1"
+            "arrow1 arrow1"
+            "etapaTitulo2 etapaTitulo2"
+            "etapaTexto2 etapaImg2"
+            "arrow2 arrow2"
+            "etapaTitulo3 etapaTitulo3"
+            "etapaImg3 etapaTexto3"
+            "arrow3 arrow3"
+            "etapaTitulo4 etapaTitulo4"
+            "etapaTexto4 etapaImg4";
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .etapaTitulo1,
+    .etapaTitulo2,
+    .etapaTitulo3,
+    .etapaTitulo4 {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    /*--------------------------------------CONTACTO 768---------------------------------------------*/
+
+    .mainGridContacto {
+        display: grid;
+        grid-template-areas:
+            "titulo titulo"
+            "bajoTitulo bajoTitulo"
+            "formGrid formGrid"
+            "footerGrid footerGrid";
+    }
+
+    .formGrid {
+        grid-area: formGrid;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*-----------------------------------------SALTO A 1024------------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (min-width:1024px) {
+
+    .mainGrid {
+        display: grid;
+        grid-template-areas:
+            "titulo titulo titulo"
+            "bajoTitulo bajoTitulo bajoTitulo"
+            "contGrid contGrid contGrid"
+            "visionMisionGrid visionMisionGrid visionMisionGrid"
+            "footerGrid footerGrid footerGrid";
+        grid-template-columns: 1fr 2fr 2fr;
+    }
+
+.contGrid {
+        grid-area: contGrid;
+        display: grid;
+        grid-template-areas:
+            "cont1 cont2 cont3";
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .visionMisionGrid {
+        display: grid;
+        grid-template-areas:
+            "visionTitulo misionTitulo"
+            "visionTexto misionTexto";
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    /*--------------------------------------------------NOSOTROS 1024-------------------------------------------------*/
+
+    .mainGridNosotros {
+        display: grid;
+        grid-template-areas:
+            "titulo titulo titulo"
+            "bajoTitulo bajoTitulo bajoTitulo"
+            "nosotrosGrid nosotrosGrid nosotrosGrid"
+            "footerGrid footerGrid footerGrid";
+        grid-template-columns: 1fr 2fr 2fr;
+    }
+
+    .nosotrosGrid {
+        display: grid;
+        grid-template-areas:
+            "nosotrosTextoUno nosotrosImgUno"
+            "nosotrosImgDos nosotrosTextoDos";
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .nosotrosImgUno,
+    .nosotrosImgDos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nosotrosImgUno img,
+    .nosotrosImgDos img {
+        width: 100%;
+    }
+
+    /*-------------------------------------------PRODUCTOS 1024---------------------------------------------*/
+
+    .mainGridProductos {
+        display: grid;
+        grid-template-areas:
+            "titulo titulo titulo"
+            "bajoTitulo bajoTitulo bajoTitulo"
+            "productoGrid productoGrid productoGrid"
+            "footerGrid footerGrid footerGrid";
+        grid-template-columns: 1fr 2fr 2fr;
+    }
+
+    .productosGrid {
+        grid-area: productosGrid;
+        display: grid;
+        grid-template-areas:
+            "producto1 producto2"
+            "producto3 producto4";
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .pUno {
+        grid-area: producto1;
+        display: grid;
+        grid-template-areas:
+            "productoTitulo1 productoTitulo1"
+            "productoImg1 productoTexto1"
+        ;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pDos {
+        grid-area: producto2;
+        display: grid;
+        grid-template-areas:
+            "productoTitulo2 productoTitulo2"
+            "productoImg2 productoTexto2"
+        ;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pTres {
+        grid-area: producto3;
+        display: grid;
+        grid-template-areas:
+            "productoTitulo3 productoTitulo3"
+            "productoImg3 productoTexto3"
+        ;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pCuatro {
+        grid-area: producto4;
+        display: grid;
+        grid-template-areas:
+            "productoTitulo4 productoTitulo4"
+            "productoImg4 productoTexto4"
+        ;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .productoTitulo1,
+    .productoTitulo2,
+    .productoTitulo3,
+    .productoTitulo4 {
+        margin: 5% auto 5% auto;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .productoTexto1,
+    .productoTexto2,
+    .productoTexto3,
+    .productoTexto4 {
+        width: 90%;
+        margin: 0 10px 20px 10px;
+        img {
+            width: 90%;
+            margin: 0 10px 20px 10px;
+        }
+    }
+
+
+    /*------------------------------------------------PROCESO 1024------------------------------------------------*/
+
+    .mainGridProceso {
+        display: grid;
+        grid-template-areas:
+            "titulo titulo titulo"
+            "bajoTitulo bajoTitulo bajoTitulo"
+            "procesoGrid procesoGrid procesoGrid"
+            "footerGrid footerGrid footerGrid";
+        grid-template-columns: 1fr 2fr 2fr;
+    }
+
+    .procesoGrid {
+        grid-area: procesoGrid;
+        display: grid;
+        grid-template-areas:
+            "etapaTitulo1 etapaTitulo1"
+            "etapaImg1 etapaTexto1"
+            "arrow1 arrow1"
+            "etapaTitulo2 etapaTitulo2"
+            "etapaTexto2 etapaImg2"
+            "arrow2 arrow2"
+            "etapaTitulo3 etapaTitulo3"
+            "etapaImg3 etapaTexto3"
+            "arrow3 arrow3"
+            "etapaTitulo4 etapaTitulo4"
+            "etapaTexto4 etapaImg4";
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .etapaTitulo1,
+    .etapaTitulo2,
+    .etapaTitulo3,
+    .etapaTitulo4 {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .mainGridContacto {
+        display: grid;
+        grid-template-areas:
+            "titulo titulo titulo"
+            "bajoTitulo bajoTitulo bajoTitulo"
+            "formGrid formGrid formGrid"
+            "footerGrid footerGrid footerGrid";
+        grid-template-columns: 1fr 2fr 2fr;
+    }
+
+    .formGrid {
+        grid-area: formGrid;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+}

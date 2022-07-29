@@ -1,0 +1,135 @@
+.barraNav {
+    background-color: var(--main-color);
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    box-shadow: var(--shadow);
+    z-index: 2;
+}
+
+.logo {
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.navToggle {
+    background: none;
+    border: none;
+    display: block;
+    margin-right: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.menuItems {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--main-color);
+    position: fixed;
+    left: 100%;
+    top: 70px;
+    width: 100%;
+    height: calc(100% - 70px);
+    overflow-y: auto;
+    transition: left 0.5s;
+    padding-left: 0;
+    li{
+        height: 50px;
+        padding: 8px 12px;
+        margin: 10px 5px;
+        display: flex;
+        align-items: center;
+        &:hover{
+            background-color: none;
+            color: var(--secondary-color);
+        }
+        a{
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.menuItems_transition {
+    left: 0;
+}
+
+@media (min-width: 768px) {
+
+    .barraNav {
+        background-color: var(--main-color);
+        height: 70px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        box-shadow: var(--shadow);
+    }
+
+    .logo {
+        height: 50px;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+
+    .navToggle {
+        background: none;
+        border: none;
+    }
+
+    .menu {
+        justify-content: space-between;
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+
+    .menuItems {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        left: 0;
+        top: 0;
+        li{
+            height: 50px;
+            padding: 8px 12px;
+            margin: 10px 5px;
+            display: flex;
+            align-items: center;
+            &:hover{
+                background-color: var(--secondary-color);
+                transition: 0.5s;
+                border-radius: 5px;
+            }
+            a{
+                color: white;
+                font-size: 15px;
+                font-weight: bold;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .navToggle {
+        display: none;
+    }
+}
+
+@media (min-width:1024px) {
+
+    .menuItems li a {
+        font-size: 25px;
+    }
+}
