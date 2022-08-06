@@ -14,7 +14,7 @@ body {
   background-image: url("../images/climpek.png"); }
 
 .barraNav {
-  background-color: #f2b807;
+  background-color: #077df2;
   height: 70px;
   width: 100%;
   position: fixed;
@@ -43,7 +43,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f2b807;
+  background-color: #077df2;
   position: fixed;
   left: 100%;
   top: 70px;
@@ -73,7 +73,7 @@ body {
 
 @media (min-width: 768px) {
   .barraNav {
-    background-color: #f2b807;
+    background-color: #077df2;
     height: 70px;
     width: 100%;
     position: fixed;
@@ -122,7 +122,7 @@ body {
     font-size: 25px; } }
 
 footer {
-  background-color: #f2b807;
+  background-color: #077df2;
   margin-top: 5%;
   grid-area: footerGrid; }
 
@@ -182,7 +182,7 @@ footer {
 .bajoTitulo {
   grid-area: bajoTitulo;
   background-color: #000030;
-  border-top: #f2b807 solid 5px;
+  border-top: #077df2 solid 5px;
   width: 100%;
   margin-bottom: 15px; }
   .bajoTitulo h1 {
@@ -205,7 +205,7 @@ footer {
 .cont3 {
   color: white;
   font-size: 1.5em;
-  background-color: #f2b807;
+  background-color: #077df2;
   z-index: 1;
   border-radius: 15px;
   box-shadow: var(--shadow);
@@ -234,7 +234,7 @@ footer {
   height: 3.5rem;
   margin: 5% auto 1% auto;
   color: white;
-  background-color: #f2b807;
+  background-color: #077df2;
   box-shadow: var(--shadow);
   border-radius: 25px; }
   .visionTitulo h3,
@@ -259,7 +259,7 @@ footer {
   width: 80%;
   margin: 2% auto 2% auto;
   background-color: white;
-  border: #f2b807 solid 2px;
+  border: #077df2 solid 2px;
   border-radius: 25px;
   box-shadow: var(--shadow); }
   .visionTexto p,
@@ -347,7 +347,7 @@ footer {
   width: 80%;
   margin: 2% auto 2% auto;
   background-color: white;
-  border: #f2b807 solid 2px;
+  border: #077df2 solid 2px;
   border-radius: 25px;
   box-shadow: var(--shadow); }
   .nosotrosTextoUno P,
@@ -441,7 +441,7 @@ footer {
 .producto {
   width: 90%;
   overflow: hidden;
-  background-color: #f2b807;
+  background-color: #077df2;
   z-index: 1;
   border-radius: 15px;
   box-shadow: var(--shadow);
@@ -506,7 +506,7 @@ footer {
   .productoTitulo2 h3,
   .productoTitulo3 h3,
   .productoTitulo4 h3 {
-    color: #f2b807;
+    color: #077df2;
     width: 100%;
     font-size: 1.2rem;
     padding: 1rem 0 .5rem 0; }
@@ -675,7 +675,7 @@ footer {
   height: 3.5rem;
   margin: 2% auto 2% auto;
   color: white;
-  background-color: #f2b807;
+  background-color: #077df2;
   box-shadow: var(--shadow);
   border-radius: 25px; }
 
@@ -730,7 +730,7 @@ footer {
   width: 80%;
   margin: 2% auto 2% auto;
   background-color: white;
-  border: #f2b807 solid 2px;
+  border: #077df2 solid 2px;
   border-radius: 25px;
   box-shadow: var(--shadow); }
   .etapaTexto1 p,
@@ -822,7 +822,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f2b807;
+  background-color: #077df2;
   z-index: 1;
   border-radius: 15px;
   box-shadow: var(--shadow); }
@@ -881,7 +881,7 @@ form {
       opacity: 0;
       transition: 0.3s;
       height: 5px;
-      background-color: #f2b807;
+      background-color: #077df2;
       top: 50%;
       transform: translateY(-50%); }
 
