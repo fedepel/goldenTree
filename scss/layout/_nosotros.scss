@@ -1,0 +1,150 @@
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*---------------------------------------PAGINA NOSOTROS---------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.nosotrosTextoUno,
+.nosotrosTextoDos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2% auto 2% auto;
+    font-size: 1em;
+    text-align: justify;
+    @include sizes(80%, auto);
+    @include boxes($main-color solid 2px, 25px, var(--shadow), white);
+
+    P {
+        margin: 2% auto 2% auto;
+        @include sizes(80%, auto);
+    }
+}
+
+.nosotrosImgUno {
+    grid-area: nosotrosImgUno;
+
+    img {
+        margin: 5% 0 5% 0;
+        @include sizes(70%, auto);
+        @include boxes($secondary-color solid 2px, 5px, var(--shadow), none);
+    }
+}
+
+.nosotrosImgDos {
+    grid-area: nosotrosImgDos;
+    @extend .nosotrosImgUno;
+}
+
+.mainGridNosotros {
+    display: grid;
+    grid-template-areas:
+        "titulo"
+        "bajoTitulo"
+        "nosotrosTextoUno"
+        "nosotrosImgUno"
+        "nosotrosTextoDos"
+        "nosotrosImgDos"
+        "footerGrid";
+}
+
+.nosotrosTextoUno {
+    grid-area: nosotrosTextoUno;
+}
+
+.nosotrosTextoDos {
+    grid-area: nosotrosTextoDos;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*--------------------------------------------SALTO A 768------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (min-width: 768px) {
+
+    .mainGridNosotros {
+        display: grid;
+        grid-template-areas:
+            "secondaryGridNos secondaryGridNos"
+            "footerGrid footerGrid";
+    }
+
+    .secondaryGridNos {
+        grid-area: secondaryGridNos;
+        grid-template-areas:
+        "titulo titulo"
+        "bajoTitulo bajoTitulo"
+        "nosotrosGrid nosotrosGrid";
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .nosotrosGrid {
+        grid-area: nosotrosGrid;
+        display: grid;
+        grid-template-areas:
+            "nosotrosTextoUno nosotrosImgUno"
+            "nosotrosImgDos nosotrosTextoDos";
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .nosotrosImgUno,
+    .nosotrosImgDos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 90%;
+        }
+    }
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*-----------------------------------------SALTO A 1024------------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (min-width:1024px) {
+
+    .mainGridNosotros {
+        display: grid;
+        grid-template-areas:
+            "secondaryGridNos secondaryGridNos secondaryGridNos"
+            "footerGrid footerGrid footerGrid";
+        grid-template-columns: 1fr 2fr 2fr;
+    }
+
+    .secondaryGridNos {
+        grid-template-areas:
+        "titulo titulo titulo"
+        "bajoTitulo bajoTitulo bajoTitulo"
+        "nosotrosGrid nosotrosGrid nosotrosGrid";
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-template-columns: 1fr;
+    }
+
+    .nosotrosGrid {
+        display: grid;
+        grid-template-areas:
+            "nosotrosTextoUno nosotrosImgUno"
+            "nosotrosImgDos nosotrosTextoDos";
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .nosotrosImgUno,
+    .nosotrosImgDos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nosotrosImgUno img,
+    .nosotrosImgDos img {
+        width: 100%;
+    }
+}

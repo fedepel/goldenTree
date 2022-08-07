@@ -1,0 +1,11 @@
+@mixin sizes ($width,$height,){
+    width: $width;
+    height: $height;
+}
+
+@mixin boxes ($border, $radius, $shadow, $bcc){
+    border: $border;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    background-color: $bcc;
+}

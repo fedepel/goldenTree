@@ -1,0 +1,75 @@
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*----------------------------------------------FOOTER---------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+footer {
+    background-color: $main-color;
+    margin-top: 5%;
+    grid-area: footerGrid;
+}
+
+.footerGrid {
+    display: grid;
+    grid-template-areas:
+        "footerTexto"
+        "footerMapa"
+        "footerCopyright"
+}
+
+.footerTexto {
+    grid-area: footerTexto;
+    padding: 2%;
+    font-weight: bolder;
+
+    img {
+        @include sizes(auto, 60px);
+        height: 60px;
+        padding: 10px auto 10px auto;
+    }
+
+    p {
+        margin: 5px auto 5px auto;
+    }
+}
+
+.footerMapa {
+    grid-area: footerMapa;
+    padding: 2%;
+}
+
+.footerCopyright {
+    grid-area: footerCopyright;
+    background-color: $secondary-color;
+    color: white;
+    padding: 2%;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*--------------------------------------------SALTO A 768------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (min-width: 768px) {
+
+    .footerGrid {
+        display: grid;
+        grid-template-areas:
+            "footerTexto footerMapa"
+            "footerCopyright footerCopyright";
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*-----------------------------------------SALTO A 1024----------------------------------------------*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (min-width:1024px) {
+
+    .footerGrid {
+        display: grid;
+        grid-template-areas:
+            "footerTexto footerMapa"
+            "footerCopyright footerCopyright";
+        grid-template-columns: 1fr 1fr;
+    }
+}

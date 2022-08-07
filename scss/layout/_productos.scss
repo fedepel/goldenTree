@@ -1,0 +1,296 @@
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*------------------------------------------PAGINA PRODUCTOS---------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.producto {
+    overflow: hidden;
+    z-index: 1;
+    margin: 5px auto 5px auto;
+    @include sizes(90%, auto);
+    @include boxes($main-color solid 2px, 15px 0 15px 0, var(--shadow), $main-color);
+}
+
+.pUno {
+    grid-area: producto1;
+    display: grid;
+    grid-template-areas:
+        "productoTitulo1"
+        "productoImg1"
+        "productoTexto1"
+    ;
+}
+
+.pDos {
+    grid-area: producto2;
+    display: grid;
+    grid-template-areas:
+        "productoTitulo2"
+        "productoImg2"
+        "productoTexto2"
+    ;
+}
+
+.pTres {
+    grid-area: producto3;
+    display: grid;
+    grid-template-areas:
+        "productoTitulo3"
+        "productoImg3"
+        "productoTexto3"
+    ;
+}
+
+.pCuatro {
+    grid-area: producto4;
+    display: grid;
+    grid-template-areas:
+        "productoTitulo4"
+        "productoImg4"
+        "productoTexto4"
+    ;
+}
+
+
+.productoTitulo1 {
+    grid-area: productoTitulo1;
+}
+
+.productoTitulo2 {
+    grid-area: productoTitulo2;
+}
+
+.productoTitulo3 {
+    grid-area: productoTitulo3;
+}
+
+.productoTitulo4 {
+    grid-area: productoTitulo4;
+}
+
+.productoTitulo1,
+.productoTitulo2,
+.productoTitulo3,
+.productoTitulo4 {
+    display: flex;
+    align-items: center;
+    margin: 1% auto 1% auto;
+    line-height: 1;
+    @include sizes(98%, 1.5rem);
+    @include boxes(white solid 2px, 25px 0 0 25px, var(--shadow), white);
+
+    img {
+        border-radius: 100%;
+        height: 1.2rem;
+    }
+
+    h3 {
+        color: $main-color;
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 1rem 0 .5rem 0;
+    }
+}
+
+.productoImg1 {
+    grid-area: productoImg1;
+}
+
+.productoImg2 {
+    grid-area: productoImg2;
+}
+
+.productoImg3 {
+    grid-area: productoImg3;
+}
+
+.productoImg4 {
+    grid-area: productoImg4;
+}
+
+.productoImg1 img,
+.productoImg2 img,
+.productoImg3 img,
+.productoImg4 img {
+    margin: 5% 0 5% 0;
+    @include boxes(none, 0, var(--shadow), none);
+}
+
+.productoTexto1 {
+    grid-area: productoTexto1;
+}
+
+.productoTexto2 {
+    grid-area: productoTexto2;
+}
+
+.productoTexto3 {
+    grid-area: productoTexto3;
+}
+
+.productoTexto4 {
+    grid-area: productoTexto4;
+}
+
+.productoTexto1,
+.productoTexto2,
+.productoTexto3,
+.productoTexto4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5% auto 5% auto;
+    color: $secondary-color;
+    text-align: justify;
+    @include sizes(98%, auto);
+    @include boxes($main-color solid 2px, 0 0 15px 0, var(--shadow), white);
+
+    p {
+        width: 80%;
+    }
+}
+
+.mainGridProductos {
+    display: grid;
+    grid-template-areas:
+        "titulo"
+        "bajoTitulo"
+        "producto1"
+        "producto2"
+        "producto3"
+        "producto4"
+        "footerGrid";
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*--------------------------------------------SALTO A 768------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (min-width: 768px) {
+
+    .mainGridProductos {
+        display: grid;
+        grid-template-areas:
+            "secondaryGridProd secondaryGridProd"
+            "footerGrid footerGrid";
+    }
+
+    .secondaryGridProd {
+        grid-area: secondaryGridProd;
+        grid-template-areas:
+            "titulo titulo"
+            "bajoTitulo bajoTitulo"
+            "productosGrid productosGrid";
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .productosGrid {
+        grid-area: productosGrid;
+        display: grid;
+        grid-template-areas:
+            "producto1 producto2"
+            "producto3 producto4";
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*-----------------------------------------SALTO A 1024------------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (min-width:1024px) {
+
+    .mainGridProductos {
+        display: grid;
+        grid-template-areas:
+            "secondaryGridProd secondaryGridProd secondaryGridProd"
+            "footerGrid footerGrid footerGrid";
+        grid-template-columns: 1fr 2fr 2fr;
+    }
+
+    .secondaryGridProd {
+        grid-template-areas:
+            "titulo titulo titulo"
+            "bajoTitulo bajoTitulo bajoTitulo"
+            "productoGrid productoGrid productoGrid";
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .productosGrid {
+        display: grid;
+        grid-template-areas:
+            "producto1 producto2"
+            "producto3 producto4";
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .pUno {
+        grid-area: producto1;
+        display: grid;
+        grid-template-areas:
+            "productoTitulo1 productoTitulo1"
+            "productoImg1 productoTexto1"
+        ;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pDos {
+        grid-area: producto2;
+        display: grid;
+        grid-template-areas:
+            "productoTitulo2 productoTitulo2"
+            "productoImg2 productoTexto2"
+        ;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pTres {
+        grid-area: producto3;
+        display: grid;
+        grid-template-areas:
+            "productoTitulo3 productoTitulo3"
+            "productoImg3 productoTexto3"
+        ;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pCuatro {
+        grid-area: producto4;
+        display: grid;
+        grid-template-areas:
+            "productoTitulo4 productoTitulo4"
+            "productoImg4 productoTexto4"
+        ;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .productoTitulo1,
+    .productoTitulo2,
+    .productoTitulo3,
+    .productoTitulo4 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .productoTexto1,
+    .productoTexto2,
+    .productoTexto3,
+    .productoTexto4 {
+        width: 90%;
+
+        img {
+            width: 90%;
+        }
+    }
+}

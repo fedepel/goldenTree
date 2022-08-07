@@ -1,0 +1,272 @@
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*------------------------------------------PAGINA PROCESO-----------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.etapaTitulo1,
+.etapaTitulo2,
+.etapaTitulo3,
+.etapaTitulo4 {
+    margin: 1% auto 0 auto;
+    @extend .visionTitulo;
+    font-size: 15px;
+}
+
+.etapaImg1,
+.etapaImg2,
+.etapaImg3,
+.etapaImg4 {
+    margin: 0 auto 0 auto;
+    @include sizes (80%, auto);
+
+    img {
+        width: 100%;
+    }
+}
+
+.etapaTexto1,
+.etapaTexto2,
+.etapaTexto3,
+.etapaTexto4 {
+    @extend .visionTexto;
+
+    p {
+        width: 80%;
+        margin: 2% auto 2% auto;
+    }
+}
+
+.arrow1,
+.arrow2,
+.arrow3 {
+    margin: 2% auto 2% auto;
+}
+
+
+.mainGridProceso {
+    display: grid;
+    grid-template-areas:
+        "titulo"
+        "bajoTitulo"
+        "etapaTitulo1"
+        "etapaImg1"
+        "etapaTexto1"
+        "arrow1"
+        "etapaTitulo2"
+        "etapaImg2"
+        "etapaTexto2"
+        "arrow2"
+        "etapaTitulo3"
+        "etapaImg3"
+        "etapaTexto3"
+        "arrow3"
+        "etapaTitulo4"
+        "etapaImg4"
+        "etapaTexto4"
+        "footerGrid";
+}
+
+.etapaTitulo1 {
+    grid-area: etapaTitulo1;
+}
+
+.etapaTitulo2 {
+    grid-area: etapaTitulo2;
+}
+
+.etapaTitulo3 {
+    grid-area: etapaTitulo3;
+}
+
+.etapaTitulo4 {
+    grid-area: etapaTitulo4;
+}
+
+.etapaImg1 {
+    grid-area: etapaImg1;
+}
+
+.etapaImg2 {
+    grid-area: etapaImg2;
+}
+
+.etapaImg3 {
+    grid-area: etapaImg3;
+}
+
+
+.etapaImg4 {
+    grid-area: etapaImg4;
+}
+
+.etapaTexto1 {
+    grid-area: etapaTexto1;
+}
+
+
+.etapaTexto2 {
+    grid-area: etapaTexto2;
+}
+
+.etapaTexto3 {
+    grid-area: etapaTexto3;
+}
+
+
+.etapaTexto4 {
+    grid-area: etapaTexto4;
+}
+
+.arrow1 {
+    grid-area: arrow1;
+}
+
+.arrow2 {
+    grid-area: arrow2;
+}
+
+.arrow3 {
+    grid-area: arrow3;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*--------------------------------------------SALTO A 768------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (min-width: 768px) {
+
+    .mainGridProceso {
+        display: grid;
+        grid-template-areas:
+            "secondaryGridPros secondaryGridPros"
+            "footerGrid footerGrid";
+    }
+
+    .secondaryGridPros {
+        grid-area: secondaryGridPros;
+        grid-template-areas:
+            "titulo titulo"
+            "bajoTitulo bajoTitulo"
+            "procesoGrid procesoGrid";
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .procesoGrid {
+        grid-area: procesoGrid;
+        display: grid;
+        grid-template-areas:
+            "etapaTitulo1 etapaTitulo1"
+            "etapaImg1 etapaImg1"
+            "etapaTexto1 etapaTexto1"
+            "arrow1 arrow1"
+            "etapaTitulo2 etapaTitulo2"
+            "etapaImg2 etapaImg2"
+            "etapaTexto2 etapaTexto2"
+            "arrow2 arrow2"
+            "etapaTitulo3 etapaTitulo3"
+            "etapaImg3 etapaImg3"
+            "etapaTexto3 etapaTexto3"
+            "arrow3 arrow3"
+            "etapaTitulo4 etapaTitulo4"
+            "etapaImg4 etapaImg4"
+            "etapaTexto4 etapaTexto4";
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+        width: 90%;
+        margin: 0 auto 0 auto;
+    }
+
+    .etapaTitulo1,
+    .etapaTitulo2,
+    .etapaTitulo3,
+    .etapaTitulo4 {
+        @include sizes(100%, auto);
+    }
+
+    .etapaImg1,
+    .etapaImg2,
+    .etapaImg3,
+    .etapaImg4 {
+        @include sizes (100%, auto);
+        overflow: hidden;
+    }
+
+    .etapaTexto1,
+    .etapaTexto2,
+    .etapaTexto3,
+    .etapaTexto4 {
+        @include sizes(100%, auto);
+        margin: 0;
+
+        p {
+            width: 80%;
+            margin: 2% auto 2% auto;
+        }
+    }
+
+}
+
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*-----------------------------------------SALTO A 1024------------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (min-width:1024px) {
+
+    .mainGridProceso {
+        display: grid;
+        grid-template-areas:
+            "secondaryGridPros secondaryGridPros secondaryGridPros"
+            "footerGrid footerGrid footerGrid";
+    }
+
+    .secondaryGridPros {
+        grid-template-areas:
+            "titulo titulo titulo"
+            "bajoTitulo bajoTitulo bajoTitulo"
+            "procesoGrid procesoGrid procesoGrid";
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .procesoGrid {
+        grid-area: procesoGrid;
+        display: grid;
+        grid-template-areas:
+            "etapaTitulo1 etapaTitulo1"
+            "etapaImg1 etapaTexto1"
+            "arrow1 arrow1"
+            "etapaTitulo2 etapaTitulo2"
+            "etapaTexto2 etapaImg2"
+            "arrow2 arrow2"
+            "etapaTitulo3 etapaTitulo3"
+            "etapaImg3 etapaTexto3"
+            "arrow3 arrow3"
+            "etapaTitulo4 etapaTitulo4"
+            "etapaTexto4 etapaImg4";
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .etapaImg1,
+    .etapaImg2,
+    .etapaImg3,
+    .etapaImg4 {
+        display: flex;
+        align-items: stretch;
+        object-fit: fill;
+    }
+
+    .etapaTexto2, .etapaTexto4 {
+        border-radius: 0 0 0 0;
+    }
+
+    .etapaImg2, .etapaImg4{
+        border-radius: 0 0 20px 0;
+    }
+}
