@@ -2,28 +2,12 @@
 /*------------------------------------------PAGINA PRODUCTOS---------------------------------------*/
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-.mainGridProductos {
-    display: grid;
-    grid-template-areas:
-        "titulo"
-        "bajoTitulo"
-        "producto1"
-        "producto2"
-        "producto3"
-        "producto4"
-        "footerGrid";
-}
-
 .producto {
-    width: 90%;
     overflow: hidden;
-    background-color: $main-color;
     z-index: 1;
-    border-radius: 15px;
-    box-shadow: var(--shadow);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
+    margin: 5px auto 5px auto;
+    @include sizes(90%, auto);
+    @include boxes($main-color solid 2px, 15px 0 15px 0, var(--shadow), $main-color);
 }
 
 .pUno {
@@ -89,19 +73,16 @@
 .productoTitulo4 {
     display: flex;
     align-items: center;
-    width: 80%;
-    height: 1.5rem;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 5%;
-    background-color: white;
-    border: 2px solid white;
+    margin: 1% auto 1% auto;
     line-height: 1;
-    border-radius: 25px;
-    img{
+    @include sizes(98%, 1.5rem);
+    @include boxes(white solid 2px, 25px 0 0 25px, var(--shadow), white);
+
+    img {
         border-radius: 100%;
         height: 1.2rem;
     }
+
     h3 {
         color: $main-color;
         width: 100%;
@@ -130,10 +111,8 @@
 .productoImg2 img,
 .productoImg3 img,
 .productoImg4 img {
-    border: $secondary-color 1px;
-    border-radius: 5px;
-    box-shadow: var(--shadow);
     margin: 5% 0 5% 0;
+    @include boxes(none, 0, var(--shadow), none);
 }
 
 .productoTexto1 {
@@ -156,20 +135,30 @@
 .productoTexto2,
 .productoTexto3,
 .productoTexto4 {
-    text-align: justify;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%;
-    margin: 2% auto 2% auto;
-    border: 2px solid white;
-    border-radius: 25px;
-    padding: 15px;
-    color: white;
+    margin: 5% auto 5% auto;
+    color: $secondary-color;
+    text-align: justify;
+    @include sizes(98%, auto);
+    @include boxes($main-color solid 2px, 0 0 15px 0, var(--shadow), white);
+
     p {
         width: 80%;
-        margin: 2% auto 2% auto;
     }
+}
+
+.mainGridProductos {
+    display: grid;
+    grid-template-areas:
+        "titulo"
+        "bajoTitulo"
+        "producto1"
+        "producto2"
+        "producto3"
+        "producto4"
+        "footerGrid";
 }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -188,11 +177,12 @@
     .secondaryGridProd {
         grid-area: secondaryGridProd;
         grid-template-areas:
-        "titulo titulo"
-        "bajoTitulo bajoTitulo"
-        "productosGrid productosGrid";
+            "titulo titulo"
+            "bajoTitulo bajoTitulo"
+            "productosGrid productosGrid";
         grid-column-start: 1;
         grid-column-end: 3;
+        grid-template-columns: 1fr 1fr;
     }
 
     .productosGrid {
@@ -205,6 +195,7 @@
         grid-column-end: 3;
         grid-row-start: 3;
         grid-row-end: 3;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -224,9 +215,9 @@
 
     .secondaryGridProd {
         grid-template-areas:
-        "titulo titulo titulo"
-        "bajoTitulo bajoTitulo bajoTitulo"
-        "productoGrid productoGrid productoGrid";
+            "titulo titulo titulo"
+            "bajoTitulo bajoTitulo bajoTitulo"
+            "productoGrid productoGrid productoGrid";
         grid-column-start: 1;
         grid-column-end: 4;
     }
@@ -286,7 +277,6 @@
     .productoTitulo2,
     .productoTitulo3,
     .productoTitulo4 {
-        margin: 5% auto 5% auto;
         grid-column-start: 1;
         grid-column-end: 3;
         grid-row-start: 1;
@@ -298,10 +288,9 @@
     .productoTexto3,
     .productoTexto4 {
         width: 90%;
-        margin: 0 10px 20px 10px;
+
         img {
             width: 90%;
-            margin: 0 10px 20px 10px;
         }
     }
 }

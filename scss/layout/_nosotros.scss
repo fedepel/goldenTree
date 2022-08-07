@@ -2,6 +2,39 @@
 /*---------------------------------------PAGINA NOSOTROS---------------------------------------*/
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+.nosotrosTextoUno,
+.nosotrosTextoDos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2% auto 2% auto;
+    font-size: 1em;
+    text-align: justify;
+    @include sizes(80%, auto);
+    @include boxes($main-color solid 2px, 25px, var(--shadow), white);
+
+    P {
+        margin: 2% auto 2% auto;
+        @include sizes(80%, auto);
+    }
+}
+
+.nosotrosImgUno {
+    grid-area: nosotrosImgUno;
+
+    img {
+        margin: 5% 0 5% 0;
+        @include sizes(70%, auto);
+        @include boxes($secondary-color solid 2px, 5px, var(--shadow), none);
+    }
+}
+
+.nosotrosImgDos {
+    grid-area: nosotrosImgDos;
+    @extend .nosotrosImgUno;
+}
+
 .mainGridNosotros {
     display: grid;
     grid-template-areas:
@@ -20,51 +53,6 @@
 
 .nosotrosTextoDos {
     grid-area: nosotrosTextoDos;
-}
-
-.nosotrosTextoUno,
-.nosotrosTextoDos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 1em;
-    text-align: justify;
-    width: 80%;
-    margin: 2% auto 2% auto;
-    background-color: white;
-    border: $main-color solid 2px;
-    border-radius: 25px;
-    box-shadow: var(--shadow);
-
-    P {
-        width: 80%;
-        margin: 2% auto 2% auto;
-    }
-}
-
-.nosotrosImgUno {
-    grid-area: nosotrosImgUno;
-
-    img {
-        width: 70%;
-        border: $secondary-color 1px;
-        border-radius: 5px;
-        box-shadow: var(--shadow);
-        margin: 5% 0 5% 0;
-    }
-}
-
-.nosotrosImgDos {
-    grid-area: nosotrosImgDos;
-
-    img {
-        width: 70%;
-        border: Ssecondary-color 1px;
-        border-radius: 5px;
-        box-shadow: VAR(--shadow);
-        margin: 5% 0 5% 0;
-    }
 }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/

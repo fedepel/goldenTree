@@ -1,4 +1,46 @@
-/*-----------------------------------------------PAGINA PROCESO-----------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*------------------------------------------PAGINA PROCESO-----------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.etapaTitulo1,
+.etapaTitulo2,
+.etapaTitulo3,
+.etapaTitulo4 {
+    margin: 1% auto 0 auto;
+    @extend .visionTitulo;
+    font-size: 15px;
+}
+
+.etapaImg1,
+.etapaImg2,
+.etapaImg3,
+.etapaImg4 {
+    margin: 0 auto 0 auto;
+    @include sizes (80%, auto);
+
+    img {
+        width: 100%;
+    }
+}
+
+.etapaTexto1,
+.etapaTexto2,
+.etapaTexto3,
+.etapaTexto4 {
+    @extend .visionTexto;
+
+    p {
+        width: 80%;
+        margin: 2% auto 2% auto;
+    }
+}
+
+.arrow1,
+.arrow2,
+.arrow3 {
+    margin: 2% auto 2% auto;
+}
+
 
 .mainGridProceso {
     display: grid;
@@ -39,22 +81,6 @@
     grid-area: etapaTitulo4;
 }
 
-.etapaTitulo1,
-.etapaTitulo2,
-.etapaTitulo3,
-.etapaTitulo4 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    height: 3.5rem;
-    margin: 2% auto 2% auto;
-    color: white;
-    background-color: $main-color;
-    box-shadow: var(--shadow);
-    border-radius: 25px;
-}
-
 .etapaImg1 {
     grid-area: etapaImg1;
 }
@@ -70,19 +96,6 @@
 
 .etapaImg4 {
     grid-area: etapaImg4;
-}
-
-.etapaImg1,
-.etapaImg2,
-.etapaImg3,
-.etapaImg4 {
-    margin: 2% auto 2% auto;
-    img {
-        border: $secondary-color 1px;
-        border-radius: 5px;
-        box-shadow: var(--shadow);
-        margin: 5% 0 5% 0;
-    }
 }
 
 .etapaTexto1 {
@@ -101,28 +114,6 @@
 
 .etapaTexto4 {
     grid-area: etapaTexto4;
-}
-
-.etapaTexto1,
-.etapaTexto2,
-.etapaTexto3,
-.etapaTexto4 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 1em;
-    text-align: justify;
-    width: 80%;
-    margin: 2% auto 2% auto;
-    background-color: white;
-    border: $main-color solid 2px;
-    border-radius: 25px;
-    box-shadow: var(--shadow);
-    p {
-        width: 80%;
-        margin: 2% auto 2% auto;
-    }
 }
 
 .arrow1 {
@@ -153,9 +144,9 @@
     .secondaryGridPros {
         grid-area: secondaryGridPros;
         grid-template-areas:
-        "titulo titulo"
-        "bajoTitulo bajoTitulo"
-        "procesoGrid procesoGrid";
+            "titulo titulo"
+            "bajoTitulo bajoTitulo"
+            "procesoGrid procesoGrid";
         grid-column-start: 1;
         grid-column-end: 3;
     }
@@ -165,30 +156,59 @@
         display: grid;
         grid-template-areas:
             "etapaTitulo1 etapaTitulo1"
-            "etapaImg1 etapaTexto1"
+            "etapaImg1 etapaImg1"
+            "etapaTexto1 etapaTexto1"
             "arrow1 arrow1"
             "etapaTitulo2 etapaTitulo2"
-            "etapaTexto2 etapaImg2"
+            "etapaImg2 etapaImg2"
+            "etapaTexto2 etapaTexto2"
             "arrow2 arrow2"
             "etapaTitulo3 etapaTitulo3"
-            "etapaImg3 etapaTexto3"
+            "etapaImg3 etapaImg3"
+            "etapaTexto3 etapaTexto3"
             "arrow3 arrow3"
             "etapaTitulo4 etapaTitulo4"
-            "etapaTexto4 etapaImg4";
+            "etapaImg4 etapaImg4"
+            "etapaTexto4 etapaTexto4";
         grid-column-start: 1;
         grid-column-end: 3;
         grid-row-start: 3;
         grid-row-end: 3;
+        width: 90%;
+        margin: 0 auto 0 auto;
     }
 
     .etapaTitulo1,
     .etapaTitulo2,
     .etapaTitulo3,
     .etapaTitulo4 {
-        width: 90%;
-        margin-bottom: 10px;
+        @include sizes(100%, auto);
     }
+
+    .etapaImg1,
+    .etapaImg2,
+    .etapaImg3,
+    .etapaImg4 {
+        @include sizes (100%, auto);
+        overflow: hidden;
+    }
+
+    .etapaTexto1,
+    .etapaTexto2,
+    .etapaTexto3,
+    .etapaTexto4 {
+        @include sizes(100%, auto);
+        margin: 0;
+
+        p {
+            width: 80%;
+            margin: 2% auto 2% auto;
+        }
+    }
+
 }
+
+
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*-----------------------------------------SALTO A 1024------------------------------------------------*/
@@ -201,14 +221,13 @@
         grid-template-areas:
             "secondaryGridPros secondaryGridPros secondaryGridPros"
             "footerGrid footerGrid footerGrid";
-        grid-template-columns: 1fr 2fr 2fr;
     }
 
     .secondaryGridPros {
         grid-template-areas:
-        "titulo titulo titulo"
-        "bajoTitulo bajoTitulo bajoTitulo"
-        "procesoGrid procesoGrid procesoGrid";
+            "titulo titulo titulo"
+            "bajoTitulo bajoTitulo bajoTitulo"
+            "procesoGrid procesoGrid procesoGrid";
         grid-column-start: 1;
         grid-column-end: 4;
     }
@@ -234,11 +253,20 @@
         grid-row-end: 3;
     }
 
-    .etapaTitulo1,
-    .etapaTitulo2,
-    .etapaTitulo3,
-    .etapaTitulo4 {
-        width: 90%;
-        margin-bottom: 10px;
+    .etapaImg1,
+    .etapaImg2,
+    .etapaImg3,
+    .etapaImg4 {
+        display: flex;
+        align-items: stretch;
+        object-fit: fill;
+    }
+
+    .etapaTexto2, .etapaTexto4 {
+        border-radius: 0 0 0 0;
+    }
+
+    .etapaImg2, .etapaImg4{
+        border-radius: 0 0 20px 0;
     }
 }

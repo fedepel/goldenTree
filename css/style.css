@@ -13,16 +13,22 @@ body {
   font-family: 'Open Sans', sans-serif;
   background-image: url("../images/climpek.png"); }
 
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*----------------------------------------------HEADER---------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 .barraNav {
-  background-color: #077df2;
-  height: 70px;
   width: 100%;
+  height: 70px;
+  border: none;
+  border-radius: 0px;
+  box-shadow: var(--shadow);
+  background-color: #077df2;
   position: fixed;
   top: 0;
-  box-shadow: var(--shadow);
   z-index: 2; }
 
 .logo {
+  width: auto;
   height: 50px;
   margin-top: 10px;
   margin-left: 20px; }
@@ -53,14 +59,12 @@ body {
   transition: left 0.5s;
   padding-left: 0; }
   .menuItems li {
+    width: auto;
     height: 50px;
     padding: 8px 12px;
     margin: 10px 5px;
     display: flex;
     align-items: center; }
-    .menuItems li:hover {
-      background-color: none;
-      color: #000030; }
     .menuItems li a {
       color: white;
       font-size: 25px;
@@ -71,18 +75,10 @@ body {
 .menuItems_transition {
   left: 0; }
 
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*--------------------------------------------SALTO A 768------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 768px) {
-  .barraNav {
-    background-color: #077df2;
-    height: 70px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    box-shadow: var(--shadow); }
-  .logo {
-    height: 50px;
-    margin-top: 10px;
-    margin-left: 20px; }
   .navToggle {
     background: none;
     border: none; }
@@ -92,35 +88,29 @@ body {
     margin: 0 auto; }
   .menuItems {
     position: relative;
-    display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    align-items: center;
     left: 0;
     top: 0; }
-    .menuItems li {
-      height: 50px;
-      padding: 8px 12px;
-      margin: 10px 5px;
-      display: flex;
-      align-items: center; }
-      .menuItems li:hover {
-        background-color: #000030;
-        transition: 0.5s;
-        border-radius: 5px; }
-      .menuItems li a {
-        color: white;
-        font-size: 15px;
-        font-weight: bold;
-        text-decoration: none;
-        text-transform: uppercase; }
+    .menuItems li:hover {
+      background-color: #000030;
+      transition: 0.5s;
+      border-radius: 5px; }
+    .menuItems li a {
+      font-size: 15px; }
   .navToggle {
     display: none; } }
 
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*-----------------------------------------SALTO A 1024------------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 1024px) {
   .menuItems li a {
-    font-size: 25px; } }
+    font-size: 20px; } }
 
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*----------------------------------------------FOOTER---------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 footer {
   background-color: #077df2;
   margin-top: 5%;
@@ -135,6 +125,8 @@ footer {
   padding: 2%;
   font-weight: bolder; }
   .footerTexto img {
+    width: auto;
+    height: 60px;
     height: 60px;
     padding: 10px auto 10px auto; }
   .footerTexto p {
@@ -150,12 +142,18 @@ footer {
   color: white;
   padding: 2%; }
 
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*--------------------------------------------SALTO A 768------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 768px) {
   .footerGrid {
     display: grid;
     grid-template-areas: "footerTexto footerMapa" "footerCopyright footerCopyright";
     grid-template-columns: 1fr 1fr; } }
 
+/*///////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*-----------------------------------------SALTO A 1024----------------------------------------------*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 1024px) {
   .footerGrid {
     display: grid;
@@ -165,29 +163,23 @@ footer {
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*-------------------------------------------PAGINA INDEX------------------------------------------*/
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
-.mainGrid {
-  display: grid;
-  grid-template-areas: "secondaryGrid" "footerGrid"; }
-
-.secondaryGrid {
-  grid-area: secondaryGrid;
-  display: grid;
-  grid-template-areas: "titulo" "bajoTitulo" "cont1" "cont2" "cont3" "visionTitulo" "visionTexto" "misionTitulo" "misionTexto"; }
-
 .titulo {
   grid-area: titulo;
   width: 100%;
+  height: auto;
   margin-top: 80px; }
 
 .bajoTitulo {
   grid-area: bajoTitulo;
+  margin-bottom: 15px;
   background-color: #000030;
   border-top: #077df2 solid 5px;
   width: 100%;
-  margin-bottom: 15px; }
+  height: auto; }
   .bajoTitulo h1 {
     text-align: center;
     width: 100%;
+    height: auto;
     font-size: 3em;
     color: white; }
 
@@ -203,69 +195,94 @@ footer {
 .cont1,
 .cont2,
 .cont3 {
-  color: white;
-  font-size: 1.5em;
-  background-color: #077df2;
-  z-index: 1;
-  border-radius: 15px;
-  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 2% auto 2% auto;
   padding: 5%;
+  color: white;
+  font-size: 1.5em;
   font-weight: bold;
   width: 80%;
   height: 10rem;
-  margin: 2% auto 2% auto;
+  border: none;
+  border-radius: 15px 0 15px 0;
+  box-shadow: var(--shadow);
+  background-color: #077df2;
+  z-index: 1;
   overflow: hidden; }
 
-.visionTitulo {
+.visionTitulo, .etapaTitulo1,
+.etapaTitulo2,
+.etapaTitulo3,
+.etapaTitulo4 {
   grid-area: visionTitulo; }
 
 .misionTitulo {
   grid-area: misionTitulo; }
 
-.visionTitulo,
+.visionTitulo, .etapaTitulo1,
+.etapaTitulo2,
+.etapaTitulo3,
+.etapaTitulo4,
 .misionTitulo {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 5% auto 0 auto;
+  color: white;
   width: 80%;
   height: 3.5rem;
-  margin: 5% auto 1% auto;
-  color: white;
-  background-color: #077df2;
+  border: auto;
+  border-radius: 20px 0 0 0;
   box-shadow: var(--shadow);
-  border-radius: 25px; }
-  .visionTitulo h3,
+  background-color: #077df2; }
+  .visionTitulo h3, .etapaTitulo1 h3, .etapaTitulo2 h3, .etapaTitulo3 h3, .etapaTitulo4 h3,
   .misionTitulo h3 {
     font-size: 2em;
     font-weight: bolder; }
 
-.visionTexto {
+.visionTexto, .etapaTexto1,
+.etapaTexto2,
+.etapaTexto3,
+.etapaTexto4 {
   grid-area: visionTexto; }
 
 .misionTexto {
   grid-area: misionTexto; }
 
-.visionTexto,
+.visionTexto, .etapaTexto1,
+.etapaTexto2,
+.etapaTexto3,
+.etapaTexto4,
 .misionTexto {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0 auto 2% auto;
   font-size: 1em;
   text-align: justify;
   width: 80%;
-  margin: 2% auto 2% auto;
-  background-color: white;
-  border: #077df2 solid 2px;
-  border-radius: 25px;
-  box-shadow: var(--shadow); }
-  .visionTexto p,
+  height: auto;
+  border: none;
+  border-radius: 0 0 20px 0;
+  box-shadow: var(--shadow);
+  background-color: white; }
+  .visionTexto p, .etapaTexto1 p, .etapaTexto2 p, .etapaTexto3 p, .etapaTexto4 p,
   .misionTexto p {
+    margin: 2% auto 2% auto;
     width: 80%;
-    margin: 2% auto 2% auto; }
+    height: auto; }
+
+.mainGrid {
+  display: grid;
+  grid-template-areas: "secondaryGrid" "footerGrid"; }
+
+.secondaryGrid {
+  grid-area: secondaryGrid;
+  display: grid;
+  grid-template-areas: "titulo" "bajoTitulo" "cont1" "cont2" "cont3" "visionTitulo" "visionTexto" "misionTitulo" "misionTexto"; }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*--------------------------------------------SALTO A 768------------------------------------------*/
@@ -326,6 +343,41 @@ footer {
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*---------------------------------------PAGINA NOSOTROS---------------------------------------*/
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+.nosotrosTextoUno,
+.nosotrosTextoDos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2% auto 2% auto;
+  font-size: 1em;
+  text-align: justify;
+  width: 80%;
+  height: auto;
+  border: #077df2 solid 2px;
+  border-radius: 25px;
+  box-shadow: var(--shadow);
+  background-color: white; }
+  .nosotrosTextoUno P,
+  .nosotrosTextoDos P {
+    margin: 2% auto 2% auto;
+    width: 80%;
+    height: auto; }
+
+.nosotrosImgUno, .nosotrosImgDos {
+  grid-area: nosotrosImgUno; }
+  .nosotrosImgUno img, .nosotrosImgDos img {
+    margin: 5% 0 5% 0;
+    width: 70%;
+    height: auto;
+    border: #000030 solid 2px;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    background-color: none; }
+
+.nosotrosImgDos {
+  grid-area: nosotrosImgDos; }
+
 .mainGridNosotros {
   display: grid;
   grid-template-areas: "titulo" "bajoTitulo" "nosotrosTextoUno" "nosotrosImgUno" "nosotrosTextoDos" "nosotrosImgDos" "footerGrid"; }
@@ -335,43 +387,6 @@ footer {
 
 .nosotrosTextoDos {
   grid-area: nosotrosTextoDos; }
-
-.nosotrosTextoUno,
-.nosotrosTextoDos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 1em;
-  text-align: justify;
-  width: 80%;
-  margin: 2% auto 2% auto;
-  background-color: white;
-  border: #077df2 solid 2px;
-  border-radius: 25px;
-  box-shadow: var(--shadow); }
-  .nosotrosTextoUno P,
-  .nosotrosTextoDos P {
-    width: 80%;
-    margin: 2% auto 2% auto; }
-
-.nosotrosImgUno {
-  grid-area: nosotrosImgUno; }
-  .nosotrosImgUno img {
-    width: 70%;
-    border: #000030 1px;
-    border-radius: 5px;
-    box-shadow: var(--shadow);
-    margin: 5% 0 5% 0; }
-
-.nosotrosImgDos {
-  grid-area: nosotrosImgDos; }
-  .nosotrosImgDos img {
-    width: 70%;
-    border: Ssecondary-color 1px;
-    border-radius: 5px;
-    box-shadow: VAR(--shadow);
-    margin: 5% 0 5% 0; }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*--------------------------------------------SALTO A 768------------------------------------------*/
@@ -393,12 +408,12 @@ footer {
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 3; }
-  .nosotrosImgUno,
+  .nosotrosImgUno, .nosotrosImgDos,
   .nosotrosImgDos {
     display: flex;
     align-items: center;
     justify-content: center; }
-    .nosotrosImgUno img,
+    .nosotrosImgUno img, .nosotrosImgDos img,
     .nosotrosImgDos img {
       width: 90%; } }
 
@@ -422,32 +437,28 @@ footer {
     grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 3; }
-  .nosotrosImgUno,
+  .nosotrosImgUno, .nosotrosImgDos,
   .nosotrosImgDos {
     display: flex;
     align-items: center;
     justify-content: center; }
-  .nosotrosImgUno img,
+  .nosotrosImgUno img, .nosotrosImgDos img,
   .nosotrosImgDos img {
     width: 100%; } }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*------------------------------------------PAGINA PRODUCTOS---------------------------------------*/
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
-.mainGridProductos {
-  display: grid;
-  grid-template-areas: "titulo" "bajoTitulo" "producto1" "producto2" "producto3" "producto4" "footerGrid"; }
-
 .producto {
-  width: 90%;
   overflow: hidden;
-  background-color: #077df2;
   z-index: 1;
-  border-radius: 15px;
+  margin: 5px auto 5px auto;
+  width: 90%;
+  height: auto;
+  border: #077df2 solid 2px;
+  border-radius: 15px 0 15px 0;
   box-shadow: var(--shadow);
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px; }
+  background-color: #077df2; }
 
 .pUno {
   grid-area: producto1;
@@ -487,15 +498,14 @@ footer {
 .productoTitulo4 {
   display: flex;
   align-items: center;
-  width: 80%;
-  height: 1.5rem;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 5%;
-  background-color: white;
-  border: 2px solid white;
+  margin: 1% auto 1% auto;
   line-height: 1;
-  border-radius: 25px; }
+  width: 98%;
+  height: 1.5rem;
+  border: white solid 2px;
+  border-radius: 25px 0 0 25px;
+  box-shadow: var(--shadow);
+  background-color: white; }
   .productoTitulo1 img,
   .productoTitulo2 img,
   .productoTitulo3 img,
@@ -527,10 +537,11 @@ footer {
 .productoImg2 img,
 .productoImg3 img,
 .productoImg4 img {
-  border: #000030 1px;
-  border-radius: 5px;
+  margin: 5% 0 5% 0;
+  border: none;
+  border-radius: 0;
   box-shadow: var(--shadow);
-  margin: 5% 0 5% 0; }
+  background-color: none; }
 
 .productoTexto1 {
   grid-area: productoTexto1; }
@@ -548,22 +559,27 @@ footer {
 .productoTexto2,
 .productoTexto3,
 .productoTexto4 {
-  text-align: justify;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80%;
-  margin: 2% auto 2% auto;
-  border: 2px solid white;
-  border-radius: 25px;
-  padding: 15px;
-  color: white; }
+  margin: 5% auto 5% auto;
+  color: #000030;
+  text-align: justify;
+  width: 98%;
+  height: auto;
+  border: #077df2 solid 2px;
+  border-radius: 0 0 15px 0;
+  box-shadow: var(--shadow);
+  background-color: white; }
   .productoTexto1 p,
   .productoTexto2 p,
   .productoTexto3 p,
   .productoTexto4 p {
-    width: 80%;
-    margin: 2% auto 2% auto; }
+    width: 80%; }
+
+.mainGridProductos {
+  display: grid;
+  grid-template-areas: "titulo" "bajoTitulo" "producto1" "producto2" "producto3" "producto4" "footerGrid"; }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*--------------------------------------------SALTO A 768------------------------------------------*/
@@ -576,7 +592,8 @@ footer {
     grid-area: secondaryGridProd;
     grid-template-areas: "titulo titulo" "bajoTitulo bajoTitulo" "productosGrid productosGrid";
     grid-column-start: 1;
-    grid-column-end: 3; }
+    grid-column-end: 3;
+    grid-template-columns: 1fr 1fr; }
   .productosGrid {
     grid-area: productosGrid;
     display: grid;
@@ -584,7 +601,8 @@ footer {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 3;
-    grid-row-end: 3; } }
+    grid-row-end: 3;
+    grid-template-columns: 1fr 1fr; } }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*-----------------------------------------SALTO A 1024------------------------------------------------*/
@@ -629,7 +647,6 @@ footer {
   .productoTitulo2,
   .productoTitulo3,
   .productoTitulo4 {
-    margin: 5% auto 5% auto;
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -638,16 +655,48 @@ footer {
   .productoTexto2,
   .productoTexto3,
   .productoTexto4 {
-    width: 90%;
-    margin: 0 10px 20px 10px; }
+    width: 90%; }
     .productoTexto1 img,
     .productoTexto2 img,
     .productoTexto3 img,
     .productoTexto4 img {
-      width: 90%;
-      margin: 0 10px 20px 10px; } }
+      width: 90%; } }
 
-/*-----------------------------------------------PAGINA PROCESO-----------------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*------------------------------------------PAGINA PROCESO-----------------------------------------*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+.etapaTitulo1,
+.etapaTitulo2,
+.etapaTitulo3,
+.etapaTitulo4 {
+  margin: 1% auto 0 auto;
+  font-size: 15px; }
+
+.etapaImg1,
+.etapaImg2,
+.etapaImg3,
+.etapaImg4 {
+  margin: 0 auto 0 auto;
+  width: 80%;
+  height: auto; }
+  .etapaImg1 img,
+  .etapaImg2 img,
+  .etapaImg3 img,
+  .etapaImg4 img {
+    width: 100%; }
+
+.etapaTexto1 p,
+.etapaTexto2 p,
+.etapaTexto3 p,
+.etapaTexto4 p {
+  width: 80%;
+  margin: 2% auto 2% auto; }
+
+.arrow1,
+.arrow2,
+.arrow3 {
+  margin: 2% auto 2% auto; }
+
 .mainGridProceso {
   display: grid;
   grid-template-areas: "titulo" "bajoTitulo" "etapaTitulo1" "etapaImg1" "etapaTexto1" "arrow1" "etapaTitulo2" "etapaImg2" "etapaTexto2" "arrow2" "etapaTitulo3" "etapaImg3" "etapaTexto3" "arrow3" "etapaTitulo4" "etapaImg4" "etapaTexto4" "footerGrid"; }
@@ -664,21 +713,6 @@ footer {
 .etapaTitulo4 {
   grid-area: etapaTitulo4; }
 
-.etapaTitulo1,
-.etapaTitulo2,
-.etapaTitulo3,
-.etapaTitulo4 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  height: 3.5rem;
-  margin: 2% auto 2% auto;
-  color: white;
-  background-color: #077df2;
-  box-shadow: var(--shadow);
-  border-radius: 25px; }
-
 .etapaImg1 {
   grid-area: etapaImg1; }
 
@@ -691,20 +725,6 @@ footer {
 .etapaImg4 {
   grid-area: etapaImg4; }
 
-.etapaImg1,
-.etapaImg2,
-.etapaImg3,
-.etapaImg4 {
-  margin: 2% auto 2% auto; }
-  .etapaImg1 img,
-  .etapaImg2 img,
-  .etapaImg3 img,
-  .etapaImg4 img {
-    border: #000030 1px;
-    border-radius: 5px;
-    box-shadow: var(--shadow);
-    margin: 5% 0 5% 0; }
-
 .etapaTexto1 {
   grid-area: etapaTexto1; }
 
@@ -716,29 +736,6 @@ footer {
 
 .etapaTexto4 {
   grid-area: etapaTexto4; }
-
-.etapaTexto1,
-.etapaTexto2,
-.etapaTexto3,
-.etapaTexto4 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 1em;
-  text-align: justify;
-  width: 80%;
-  margin: 2% auto 2% auto;
-  background-color: white;
-  border: #077df2 solid 2px;
-  border-radius: 25px;
-  box-shadow: var(--shadow); }
-  .etapaTexto1 p,
-  .etapaTexto2 p,
-  .etapaTexto3 p,
-  .etapaTexto4 p {
-    width: 80%;
-    margin: 2% auto 2% auto; }
 
 .arrow1 {
   grid-area: arrow1; }
@@ -764,17 +761,39 @@ footer {
   .procesoGrid {
     grid-area: procesoGrid;
     display: grid;
-    grid-template-areas: "etapaTitulo1 etapaTitulo1" "etapaImg1 etapaTexto1" "arrow1 arrow1" "etapaTitulo2 etapaTitulo2" "etapaTexto2 etapaImg2" "arrow2 arrow2" "etapaTitulo3 etapaTitulo3" "etapaImg3 etapaTexto3" "arrow3 arrow3" "etapaTitulo4 etapaTitulo4" "etapaTexto4 etapaImg4";
+    grid-template-areas: "etapaTitulo1 etapaTitulo1" "etapaImg1 etapaImg1" "etapaTexto1 etapaTexto1" "arrow1 arrow1" "etapaTitulo2 etapaTitulo2" "etapaImg2 etapaImg2" "etapaTexto2 etapaTexto2" "arrow2 arrow2" "etapaTitulo3 etapaTitulo3" "etapaImg3 etapaImg3" "etapaTexto3 etapaTexto3" "arrow3 arrow3" "etapaTitulo4 etapaTitulo4" "etapaImg4 etapaImg4" "etapaTexto4 etapaTexto4";
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 3;
-    grid-row-end: 3; }
+    grid-row-end: 3;
+    width: 90%;
+    margin: 0 auto 0 auto; }
   .etapaTitulo1,
   .etapaTitulo2,
   .etapaTitulo3,
   .etapaTitulo4 {
-    width: 90%;
-    margin-bottom: 10px; } }
+    width: 100%;
+    height: auto; }
+  .etapaImg1,
+  .etapaImg2,
+  .etapaImg3,
+  .etapaImg4 {
+    width: 100%;
+    height: auto;
+    overflow: hidden; }
+  .etapaTexto1,
+  .etapaTexto2,
+  .etapaTexto3,
+  .etapaTexto4 {
+    width: 100%;
+    height: auto;
+    margin: 0; }
+    .etapaTexto1 p,
+    .etapaTexto2 p,
+    .etapaTexto3 p,
+    .etapaTexto4 p {
+      width: 80%;
+      margin: 2% auto 2% auto; } }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*-----------------------------------------SALTO A 1024------------------------------------------------*/
@@ -782,8 +801,7 @@ footer {
 @media (min-width: 1024px) {
   .mainGridProceso {
     display: grid;
-    grid-template-areas: "secondaryGridPros secondaryGridPros secondaryGridPros" "footerGrid footerGrid footerGrid";
-    grid-template-columns: 1fr 2fr 2fr; }
+    grid-template-areas: "secondaryGridPros secondaryGridPros secondaryGridPros" "footerGrid footerGrid footerGrid"; }
   .secondaryGridPros {
     grid-template-areas: "titulo titulo titulo" "bajoTitulo bajoTitulo bajoTitulo" "procesoGrid procesoGrid procesoGrid";
     grid-column-start: 1;
@@ -796,12 +814,17 @@ footer {
     grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 3; }
-  .etapaTitulo1,
-  .etapaTitulo2,
-  .etapaTitulo3,
-  .etapaTitulo4 {
-    width: 90%;
-    margin-bottom: 10px; } }
+  .etapaImg1,
+  .etapaImg2,
+  .etapaImg3,
+  .etapaImg4 {
+    display: flex;
+    align-items: stretch;
+    object-fit: fill; }
+  .etapaTexto2, .etapaTexto4 {
+    border-radius: 0 0 0 0; }
+  .etapaImg2, .etapaImg4 {
+    border-radius: 0 0 20px 0; } }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*------------------------------------------PAGINA CONTACTO----------------------------------------*/
