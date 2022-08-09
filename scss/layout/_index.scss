@@ -14,7 +14,7 @@
     background-color: $secondary-color;
     border-top: $main-color solid 5px;
     @include sizes(100%, auto);
-    
+
     h1 {
         text-align: center;
         @include sizes(100%, auto);
@@ -69,7 +69,7 @@
     color: white;
     @include sizes (80%, 3.5rem);
     @include boxes (auto, 20px 0 0 0, var(--shadow), $main-color);
-    
+
     h3 {
         font-size: 2em;
         font-weight: bolder;
@@ -95,7 +95,7 @@
     text-align: justify;
     @include sizes (80%, auto);
     @include boxes (none, 0 0 20px 0, var(--shadow), white);
-    
+
     p {
         margin: 2% auto 2% auto;
         @include sizes (80%, auto);
@@ -107,6 +107,8 @@
     grid-template-areas:
         "secondaryGrid"
         "footerGrid";
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 .secondaryGrid {
@@ -122,8 +124,8 @@
         "visionTexto"
         "misionTitulo"
         "misionTexto";
-        grid-column-start: 1;
-        grid-column-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -131,7 +133,7 @@
 /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 @media (min-width: 768px) {
-    
+
     .mainGrid {
         grid-template-areas:
             "secondaryGrid secondaryGrid"
