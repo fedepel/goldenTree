@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 400 400" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<clipPath id="ArtboardFrame">
+<rect height="400" width="400" x="0" y="0"/>
+</clipPath>
+<g clip-path="url(#ArtboardFrame)" id="Logo" vectornator:layerName="Logo">
+<path d="M1.16563 199.976C1.16563 90.0539 90.1144 0.944294 199.838 0.944294C309.562 0.944294 398.511 90.0539 398.511 199.976C398.511 309.898 309.562 399.008 199.838 399.008C90.1144 399.008 1.16563 309.898 1.16563 199.976Z" fill="#ffffff" fill-rule="nonzero" opacity="1" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+<path d="M1.57046 200.429L398.373 201.501C398.373 201.501 309.601 212.189 260.843 260.841C212.085 309.493 200.343 398.442 200.343 398.442C200.343 398.442 187.3 309.913 138.929 261.002C90.5585 212.092 1.57046 200.429 1.57046 200.429Z" fill="#000030" fill-rule="nonzero" opacity="1" stroke="#00002b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+</g>
+</svg>

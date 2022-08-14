@@ -1,13 +1,10 @@
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*------------------------------------------PAGINA PRODUCTOS---------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
-
 .producto {
     overflow: hidden;
     z-index: 1;
-    margin: 5px auto 5px auto;
+    margin: 2% auto 2% auto;
     @include sizes(90%, auto);
-    @include boxes($main-color solid 2px, 15px 0 15px 0, var(--shadow), $main-color);
+    @include boxes(none, 15px 0 15px 0, var(--shadow), white);
+    grid-template-rows: 1fr 5fr 5fr;
 }
 
 .pUno {
@@ -76,15 +73,16 @@
     margin: 1% auto 1% auto;
     line-height: 1;
     @include sizes(98%, 1.5rem);
-    @include boxes(white solid 2px, 25px 0 0 25px, var(--shadow), white);
+    @include boxes(none, 25px 0 0 25px, var(--shadow), $secondary-color);
 
     img {
         border-radius: 100%;
         height: 1.2rem;
+        padding-left: 1%;
     }
 
-    h3 {
-        color: $main-color;
+    h2 {
+        color: white;
         width: 100%;
         font-size: 1.2rem;
         padding: 1rem 0 .5rem 0;
@@ -107,12 +105,16 @@
     grid-area: productoImg4;
 }
 
-.productoImg1 img,
-.productoImg2 img,
-.productoImg3 img,
-.productoImg4 img {
-    margin: 5% 0 5% 0;
-    @include boxes(none, 0, var(--shadow), none);
+.productoImg1,
+.productoImg2,
+.productoImg3,
+.productoImg4 {
+    display: flex;
+    justify-content: center;
+    img{
+    margin: 0 auto 0 auto;
+    height: 150px;
+    }
 }
 
 .productoTexto1 {
@@ -136,13 +138,10 @@
 .productoTexto3,
 .productoTexto4 {
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin: 5% auto 5% auto;
-    color: $secondary-color;
     text-align: justify;
-    @include sizes(98%, auto);
-    @include boxes($main-color solid 2px, 0 0 15px 0, var(--shadow), white);
+    color: $secondary-color;
+    @include sizes(100%, auto);
 
     p {
         width: 80%;
@@ -160,10 +159,6 @@
         "producto4"
         "footerGrid";
 }
-
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*--------------------------------------------SALTO A 768------------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 @media (min-width: 768px) {
 
@@ -197,11 +192,17 @@
         grid-row-end: 3;
         grid-template-columns: 1fr 1fr;
     }
-}
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*-----------------------------------------SALTO A 1024------------------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    .productoTexto1,
+    .productoTexto2,
+    .productoTexto3,
+    .productoTexto4 {
+        width: 100%;
+        p {
+            width: 90%;
+        }
+    }
+}
 
 @media (min-width:1024px) {
 
@@ -233,6 +234,10 @@
         grid-row-end: 3;
     }
 
+    .producto {
+        grid-template-rows: 1fr 5fr;
+    }
+
     .pUno {
         grid-area: producto1;
         display: grid;
@@ -240,7 +245,6 @@
             "productoTitulo1 productoTitulo1"
             "productoImg1 productoTexto1"
         ;
-        grid-template-columns: 1fr 1fr;
     }
 
     .pDos {
@@ -250,7 +254,6 @@
             "productoTitulo2 productoTitulo2"
             "productoImg2 productoTexto2"
         ;
-        grid-template-columns: 1fr 1fr;
     }
 
     .pTres {
@@ -260,7 +263,6 @@
             "productoTitulo3 productoTitulo3"
             "productoImg3 productoTexto3"
         ;
-        grid-template-columns: 1fr 1fr;
     }
 
     .pCuatro {
@@ -270,7 +272,6 @@
             "productoTitulo4 productoTitulo4"
             "productoImg4 productoTexto4"
         ;
-        grid-template-columns: 1fr 1fr;
     }
 
     .productoTitulo1,
@@ -281,16 +282,5 @@
         grid-column-end: 3;
         grid-row-start: 1;
         grid-row-end: 1;
-    }
-
-    .productoTexto1,
-    .productoTexto2,
-    .productoTexto3,
-    .productoTexto4 {
-        width: 90%;
-
-        img {
-            width: 90%;
-        }
     }
 }

@@ -1,38 +1,23 @@
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*---------------------------------------PAGINA NOSOTROS---------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
-
 .nosotrosTextoUno,
 .nosotrosTextoDos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 2% auto 2% auto;
-    font-size: 1em;
-    text-align: justify;
-    @include sizes(80%, auto);
-    @include boxes($main-color solid 2px, 25px, var(--shadow), white);
+    @extend .visionTexto;
+    border-radius: 20px 0 0 0;
+    margin: 5% auto 0 auto;
 
-    P {
+    p {
+        width: 80%;
         margin: 2% auto 2% auto;
-        @include sizes(80%, auto);
     }
 }
 
-.nosotrosImgUno {
-    grid-area: nosotrosImgUno;
-
-    img {
-        margin: 5% 0 5% 0;
-        @include sizes(70%, auto);
-        @include boxes($secondary-color solid 2px, 5px, var(--shadow), none);
-    }
-}
-
+.nosotrosImgUno,
 .nosotrosImgDos {
-    grid-area: nosotrosImgDos;
-    @extend .nosotrosImgUno;
+    margin: 0 auto 2% auto;
+    
+    img {
+        @include sizes (80%, auto);
+        border-radius: 0 0 20px 0;
+    }
 }
 
 .mainGridNosotros {
@@ -57,9 +42,13 @@
     grid-area: nosotrosTextoDos;
 }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*--------------------------------------------SALTO A 768------------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+.nosotrosImgUno {
+    grid-area: nosotrosImgUno;
+}
+
+.nosotrosImgDos {
+    grid-area: nosotrosImgDos;
+}
 
 @media (min-width: 768px) {
 
@@ -73,9 +62,9 @@
     .secondaryGridNos {
         grid-area: secondaryGridNos;
         grid-template-areas:
-        "titulo titulo"
-        "bajoTitulo bajoTitulo"
-        "nosotrosGrid nosotrosGrid";
+            "titulo titulo"
+            "bajoTitulo bajoTitulo"
+            "nosotrosGrid nosotrosGrid";
         grid-column-start: 1;
         grid-column-end: 3;
     }
@@ -90,22 +79,31 @@
         grid-column-end: 3;
         grid-row-start: 3;
         grid-row-end: 3;
+        width: 80%;
+        margin: 0 auto 0 auto;
+    }
+
+    .nosotrosTextoUno,
+    .nosotrosTextoDos {
+        @include sizes(100%, auto);
+        margin: 0 0 0 0;
+    }
+
+    .nosotrosTextoDos{
+        border-radius: 0 0 20px 0;
     }
 
     .nosotrosImgUno,
     .nosotrosImgDos {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        margin: 0 0 0 0;
+        overflow: hidden;
         img {
-            width: 90%;
+            @include sizes (auto, 100%);
+            border-radius: 0 0 0 0;
         }
     }
-}
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*-----------------------------------------SALTO A 1024------------------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+}
 
 @media (min-width:1024px) {
 
@@ -119,9 +117,9 @@
 
     .secondaryGridNos {
         grid-template-areas:
-        "titulo titulo titulo"
-        "bajoTitulo bajoTitulo bajoTitulo"
-        "nosotrosGrid nosotrosGrid nosotrosGrid";
+            "titulo titulo titulo"
+            "bajoTitulo bajoTitulo bajoTitulo"
+            "nosotrosGrid nosotrosGrid nosotrosGrid";
         grid-column-start: 1;
         grid-column-end: 4;
         grid-template-columns: 1fr;
@@ -138,15 +136,8 @@
         grid-row-end: 3;
     }
 
-    .nosotrosImgUno,
-    .nosotrosImgDos {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .nosotrosImgUno img,
-    .nosotrosImgDos img {
+    .nosotrosImgDos img{
         width: 100%;
+        border-radius: 0 0 0 0;
     }
 }
