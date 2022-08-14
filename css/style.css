@@ -13,9 +13,6 @@ body {
   font-family: 'Open Sans', sans-serif;
   background-image: url("../images/climpek.png"); }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*----------------------------------------------HEADER---------------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 .barraNav {
   width: 100%;
   height: 70px;
@@ -75,9 +72,6 @@ body {
 .menuItems_transition {
   left: 0; }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*--------------------------------------------SALTO A 768------------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 768px) {
   .navToggle {
     background: none;
@@ -101,16 +95,10 @@ body {
   .navToggle {
     display: none; } }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*-----------------------------------------SALTO A 1024------------------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 1024px) {
   .menuItems li a {
     font-size: 20px; } }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*----------------------------------------------FOOTER---------------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 footer {
   background-color: #077df2;
   margin-top: 5%;
@@ -142,27 +130,18 @@ footer {
   color: white;
   padding: 2%; }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*--------------------------------------------SALTO A 768------------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 768px) {
   .footerGrid {
     display: grid;
     grid-template-areas: "footerTexto footerMapa" "footerCopyright footerCopyright";
     grid-template-columns: 1fr 1fr; } }
 
-/*///////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*-----------------------------------------SALTO A 1024----------------------------------------------*/
-/*///////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 1024px) {
   .footerGrid {
     display: grid;
     grid-template-areas: "footerTexto footerMapa" "footerCopyright footerCopyright";
     grid-template-columns: 1fr 1fr; } }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*-------------------------------------------PAGINA INDEX------------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 .titulo {
   grid-area: titulo;
   width: 100%;
@@ -242,7 +221,8 @@ footer {
     font-size: 2em;
     font-weight: bolder; }
 
-.visionTexto, .etapaTexto1,
+.visionTexto, .nosotrosTextoUno,
+.nosotrosTextoDos, .etapaTexto1,
 .etapaTexto2,
 .etapaTexto3,
 .etapaTexto4 {
@@ -251,7 +231,8 @@ footer {
 .misionTexto {
   grid-area: misionTexto; }
 
-.visionTexto, .etapaTexto1,
+.visionTexto, .nosotrosTextoUno,
+.nosotrosTextoDos, .etapaTexto1,
 .etapaTexto2,
 .etapaTexto3,
 .etapaTexto4,
@@ -269,7 +250,7 @@ footer {
   border-radius: 0 0 20px 0;
   box-shadow: var(--shadow);
   background-color: white; }
-  .visionTexto p, .etapaTexto1 p, .etapaTexto2 p, .etapaTexto3 p, .etapaTexto4 p,
+  .visionTexto p, .nosotrosTextoUno p, .nosotrosTextoDos p, .etapaTexto1 p, .etapaTexto2 p, .etapaTexto3 p, .etapaTexto4 p,
   .misionTexto p {
     margin: 2% auto 2% auto;
     width: 80%;
@@ -284,9 +265,6 @@ footer {
   display: grid;
   grid-template-areas: "titulo" "bajoTitulo" "cont1" "cont2" "cont3" "visionTitulo" "visionTexto" "misionTitulo" "misionTexto"; }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*--------------------------------------------SALTO A 768------------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 768px) {
   .mainGrid {
     grid-template-areas: "secondaryGrid secondaryGrid" "footerGrid footerGrid"; }
@@ -311,9 +289,6 @@ footer {
     grid-row-start: 4;
     grid-row-end: 4; } }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*-----------------------------------------SALTO A 1024------------------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 1024px) {
   .mainGrid {
     display: grid;
@@ -340,43 +315,23 @@ footer {
     grid-row-start: 4;
     grid-row-end: 4; } }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*---------------------------------------PAGINA NOSOTROS---------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 .nosotrosTextoUno,
 .nosotrosTextoDos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 2% auto 2% auto;
-  font-size: 1em;
-  text-align: justify;
-  width: 80%;
-  height: auto;
-  border: #077df2 solid 2px;
-  border-radius: 25px;
-  box-shadow: var(--shadow);
-  background-color: white; }
-  .nosotrosTextoUno P,
-  .nosotrosTextoDos P {
-    margin: 2% auto 2% auto;
+  border-radius: 20px 0 0 0;
+  margin: 5% auto 0 auto; }
+  .nosotrosTextoUno p,
+  .nosotrosTextoDos p {
     width: 80%;
-    height: auto; }
+    margin: 2% auto 2% auto; }
 
-.nosotrosImgUno, .nosotrosImgDos {
-  grid-area: nosotrosImgUno; }
-  .nosotrosImgUno img, .nosotrosImgDos img {
-    margin: 5% 0 5% 0;
-    width: 70%;
-    height: auto;
-    border: #000030 solid 2px;
-    border-radius: 5px;
-    box-shadow: var(--shadow);
-    background-color: none; }
-
+.nosotrosImgUno,
 .nosotrosImgDos {
-  grid-area: nosotrosImgDos; }
+  margin: 0 auto 2% auto; }
+  .nosotrosImgUno img,
+  .nosotrosImgDos img {
+    width: 80%;
+    height: auto;
+    border-radius: 0 0 20px 0; }
 
 .mainGridNosotros {
   display: grid;
@@ -388,9 +343,12 @@ footer {
 .nosotrosTextoDos {
   grid-area: nosotrosTextoDos; }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*--------------------------------------------SALTO A 768------------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+.nosotrosImgUno {
+  grid-area: nosotrosImgUno; }
+
+.nosotrosImgDos {
+  grid-area: nosotrosImgDos; }
+
 @media (min-width: 768px) {
   .mainGridNosotros {
     display: grid;
@@ -407,19 +365,26 @@ footer {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 3;
-    grid-row-end: 3; }
-  .nosotrosImgUno, .nosotrosImgDos,
+    grid-row-end: 3;
+    width: 80%;
+    margin: 0 auto 0 auto; }
+  .nosotrosTextoUno,
+  .nosotrosTextoDos {
+    width: 100%;
+    height: auto;
+    margin: 0 0 0 0; }
+  .nosotrosTextoDos {
+    border-radius: 0 0 20px 0; }
+  .nosotrosImgUno,
   .nosotrosImgDos {
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-    .nosotrosImgUno img, .nosotrosImgDos img,
+    margin: 0 0 0 0;
+    overflow: hidden; }
+    .nosotrosImgUno img,
     .nosotrosImgDos img {
-      width: 90%; } }
+      width: auto;
+      height: 100%;
+      border-radius: 0 0 0 0; } }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*-----------------------------------------SALTO A 1024------------------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 1024px) {
   .mainGridNosotros {
     display: grid;
@@ -437,28 +402,21 @@ footer {
     grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 3; }
-  .nosotrosImgUno, .nosotrosImgDos,
-  .nosotrosImgDos {
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-  .nosotrosImgUno img, .nosotrosImgDos img,
   .nosotrosImgDos img {
-    width: 100%; } }
+    width: 100%;
+    border-radius: 0 0 0 0; } }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*------------------------------------------PAGINA PRODUCTOS---------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 .producto {
   overflow: hidden;
   z-index: 1;
-  margin: 5px auto 5px auto;
+  margin: 2% auto 2% auto;
   width: 90%;
   height: auto;
-  border: #077df2 solid 2px;
+  border: none;
   border-radius: 15px 0 15px 0;
   box-shadow: var(--shadow);
-  background-color: #077df2; }
+  background-color: white;
+  grid-template-rows: 1fr 5fr 5fr; }
 
 .pUno {
   grid-area: producto1;
@@ -502,21 +460,22 @@ footer {
   line-height: 1;
   width: 98%;
   height: 1.5rem;
-  border: white solid 2px;
+  border: none;
   border-radius: 25px 0 0 25px;
   box-shadow: var(--shadow);
-  background-color: white; }
+  background-color: #000030; }
   .productoTitulo1 img,
   .productoTitulo2 img,
   .productoTitulo3 img,
   .productoTitulo4 img {
     border-radius: 100%;
-    height: 1.2rem; }
-  .productoTitulo1 h3,
-  .productoTitulo2 h3,
-  .productoTitulo3 h3,
-  .productoTitulo4 h3 {
-    color: #077df2;
+    height: 1.2rem;
+    padding-left: 1%; }
+  .productoTitulo1 h2,
+  .productoTitulo2 h2,
+  .productoTitulo3 h2,
+  .productoTitulo4 h2 {
+    color: white;
     width: 100%;
     font-size: 1.2rem;
     padding: 1rem 0 .5rem 0; }
@@ -533,15 +492,18 @@ footer {
 .productoImg4 {
   grid-area: productoImg4; }
 
-.productoImg1 img,
-.productoImg2 img,
-.productoImg3 img,
-.productoImg4 img {
-  margin: 5% 0 5% 0;
-  border: none;
-  border-radius: 0;
-  box-shadow: var(--shadow);
-  background-color: none; }
+.productoImg1,
+.productoImg2,
+.productoImg3,
+.productoImg4 {
+  display: flex;
+  justify-content: center; }
+  .productoImg1 img,
+  .productoImg2 img,
+  .productoImg3 img,
+  .productoImg4 img {
+    margin: 0 auto 0 auto;
+    height: 150px; }
 
 .productoTexto1 {
   grid-area: productoTexto1; }
@@ -560,17 +522,11 @@ footer {
 .productoTexto3,
 .productoTexto4 {
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin: 5% auto 5% auto;
-  color: #000030;
   text-align: justify;
-  width: 98%;
-  height: auto;
-  border: #077df2 solid 2px;
-  border-radius: 0 0 15px 0;
-  box-shadow: var(--shadow);
-  background-color: white; }
+  color: #000030;
+  width: 100%;
+  height: auto; }
   .productoTexto1 p,
   .productoTexto2 p,
   .productoTexto3 p,
@@ -581,9 +537,6 @@ footer {
   display: grid;
   grid-template-areas: "titulo" "bajoTitulo" "producto1" "producto2" "producto3" "producto4" "footerGrid"; }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*--------------------------------------------SALTO A 768------------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 768px) {
   .mainGridProductos {
     display: grid;
@@ -602,11 +555,18 @@ footer {
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 3;
-    grid-template-columns: 1fr 1fr; } }
+    grid-template-columns: 1fr 1fr; }
+  .productoTexto1,
+  .productoTexto2,
+  .productoTexto3,
+  .productoTexto4 {
+    width: 100%; }
+    .productoTexto1 p,
+    .productoTexto2 p,
+    .productoTexto3 p,
+    .productoTexto4 p {
+      width: 90%; } }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*-----------------------------------------SALTO A 1024------------------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 1024px) {
   .mainGridProductos {
     display: grid;
@@ -623,26 +583,24 @@ footer {
     grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 3; }
+  .producto {
+    grid-template-rows: 1fr 5fr; }
   .pUno {
     grid-area: producto1;
     display: grid;
-    grid-template-areas: "productoTitulo1 productoTitulo1" "productoImg1 productoTexto1";
-    grid-template-columns: 1fr 1fr; }
+    grid-template-areas: "productoTitulo1 productoTitulo1" "productoImg1 productoTexto1"; }
   .pDos {
     grid-area: producto2;
     display: grid;
-    grid-template-areas: "productoTitulo2 productoTitulo2" "productoImg2 productoTexto2";
-    grid-template-columns: 1fr 1fr; }
+    grid-template-areas: "productoTitulo2 productoTitulo2" "productoImg2 productoTexto2"; }
   .pTres {
     grid-area: producto3;
     display: grid;
-    grid-template-areas: "productoTitulo3 productoTitulo3" "productoImg3 productoTexto3";
-    grid-template-columns: 1fr 1fr; }
+    grid-template-areas: "productoTitulo3 productoTitulo3" "productoImg3 productoTexto3"; }
   .pCuatro {
     grid-area: producto4;
     display: grid;
-    grid-template-areas: "productoTitulo4 productoTitulo4" "productoImg4 productoTexto4";
-    grid-template-columns: 1fr 1fr; }
+    grid-template-areas: "productoTitulo4 productoTitulo4" "productoImg4 productoTexto4"; }
   .productoTitulo1,
   .productoTitulo2,
   .productoTitulo3,
@@ -650,21 +608,8 @@ footer {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
-    grid-row-end: 1; }
-  .productoTexto1,
-  .productoTexto2,
-  .productoTexto3,
-  .productoTexto4 {
-    width: 90%; }
-    .productoTexto1 img,
-    .productoTexto2 img,
-    .productoTexto3 img,
-    .productoTexto4 img {
-      width: 90%; } }
+    grid-row-end: 1; } }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*------------------------------------------PAGINA PROCESO-----------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 .etapaTitulo1,
 .etapaTitulo2,
 .etapaTitulo3,
@@ -746,9 +691,6 @@ footer {
 .arrow3 {
   grid-area: arrow3; }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*--------------------------------------------SALTO A 768------------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 768px) {
   .mainGridProceso {
     display: grid;
@@ -795,9 +737,6 @@ footer {
       width: 80%;
       margin: 2% auto 2% auto; } }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*-----------------------------------------SALTO A 1024------------------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 1024px) {
   .mainGridProceso {
     display: grid;
@@ -826,9 +765,6 @@ footer {
   .etapaImg2, .etapaImg4 {
     border-radius: 0 0 20px 0; } }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*------------------------------------------PAGINA CONTACTO----------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 .mainGridContacto {
   display: grid;
   grid-template-areas: "titulo" "bajoTitulo" "formGrid" "footerGrid"; }
@@ -965,9 +901,6 @@ textarea.input {
   width: 50%;
   opacity: 1; }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*--------------------------------------------SALTO A 768------------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 768px) {
   .mainGridContacto {
     display: grid;
@@ -982,9 +915,6 @@ textarea.input {
     grid-column-start: 1;
     grid-column-end: 3; } }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*-----------------------------------------SALTO A 1024------------------------------------------------*/
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 1024px) {
   .mainGridContacto {
     display: grid;
