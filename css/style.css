@@ -106,9 +106,7 @@ footer {
 
 .footerGrid {
   display: grid;
-  grid-template-areas: "footerTexto" "footerMapa" "footerCopyright";
-  grid-column-start: 1;
-  grid-column-end: 3; }
+  grid-template-areas: "footerTexto" "footerMapa" "footerCopyright"; }
 
 .footerTexto {
   grid-area: footerTexto;
@@ -259,24 +257,18 @@ footer {
 
 .mainGrid {
   display: grid;
-  grid-template-areas: "secondaryGrid" "footerGrid";
-  grid-column-start: 1;
-  grid-column-end: 3; }
+  grid-template-areas: "secondaryGrid" "footerGrid"; }
 
 .secondaryGrid {
   grid-area: secondaryGrid;
   display: grid;
-  grid-template-areas: "titulo" "bajoTitulo" "cont1" "cont2" "cont3" "visionTitulo" "visionTexto" "misionTitulo" "misionTexto";
-  grid-column-start: 1;
-  grid-column-end: 3; }
+  grid-template-areas: "titulo" "bajoTitulo" "cont1" "cont2" "cont3" "visionTitulo" "visionTexto" "misionTitulo" "misionTexto"; }
 
 @media (min-width: 768px) {
   .mainGrid {
     grid-template-areas: "secondaryGrid secondaryGrid" "footerGrid footerGrid"; }
   .secondaryGrid {
-    grid-template-areas: "titulo titulo" "bajoTitulo bajoTitulo" "contGrid contGrid" "visionMisionGrid visionMisionGrid" "visionMisionGrid visionMisionGrid";
-    grid-column-start: 1;
-    grid-column-end: 3; }
+    grid-template-areas: "titulo titulo" "bajoTitulo bajoTitulo" "contGrid contGrid" "visionMisionGrid visionMisionGrid" "visionMisionGrid visionMisionGrid"; }
   .contGrid {
     grid-area: contGrid;
     display: grid;
@@ -651,7 +643,9 @@ footer {
 
 .mainGridProceso {
   display: grid;
-  grid-template-areas: "titulo" "bajoTitulo" "etapaTitulo1" "etapaImg1" "etapaTexto1" "arrow1" "etapaTitulo2" "etapaImg2" "etapaTexto2" "arrow2" "etapaTitulo3" "etapaImg3" "etapaTexto3" "arrow3" "etapaTitulo4" "etapaImg4" "etapaTexto4" "footerGrid"; }
+  grid-template-areas: "titulo" "bajoTitulo" "etapaTitulo1" "etapaImg1" "etapaTexto1" "arrow1" "etapaTitulo2" "etapaImg2" "etapaTexto2" "arrow2" "etapaTitulo3" "etapaImg3" "etapaTexto3" "arrow3" "etapaTitulo4" "etapaImg4" "etapaTexto4" "footerGrid";
+  grid-column-start: 1;
+  grid-column-end: 3; }
 
 .etapaTitulo1 {
   grid-area: etapaTitulo1; }
@@ -767,9 +761,11 @@ footer {
     display: flex;
     align-items: stretch;
     object-fit: fill; }
-  .etapaTexto2, .etapaTexto4 {
+  .etapaTexto2,
+  .etapaTexto4 {
     border-radius: 0 0 0 0; }
-  .etapaImg2, .etapaImg4 {
+  .etapaImg2,
+  .etapaImg4 {
     border-radius: 0 0 20px 0; } }
 
 .mainGridContacto {
@@ -911,7 +907,9 @@ textarea.input {
 @media (min-width: 768px) {
   .mainGridContacto {
     display: grid;
-    grid-template-areas: "secondaryGridCont secondaryGridCont" "footerGrid footerGrid"; }
+    grid-template-areas: "secondaryGridCont secondaryGridCont" "footerGrid footerGrid";
+    grid-column-start: 1;
+    grid-column-end: 3; }
   .secondaryGridCont {
     grid-area: secondaryGridCont;
     grid-template-areas: "titulo titulo" "bajoTitulo bajoTitulo" "formGrid formGrid";

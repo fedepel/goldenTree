@@ -59,6 +59,8 @@
         "etapaImg4"
         "etapaTexto4"
         "footerGrid";
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 .etapaTitulo1 {
@@ -248,11 +250,13 @@
         object-fit: fill;
     }
 
-    .etapaTexto2, .etapaTexto4 {
+    .etapaTexto2,
+    .etapaTexto4 {
         border-radius: 0 0 0 0;
     }
 
-    .etapaImg2, .etapaImg4{
+    .etapaImg2,
+    .etapaImg4 {
         border-radius: 0 0 20px 0;
     }
 }
