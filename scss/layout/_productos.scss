@@ -13,8 +13,7 @@
     grid-template-areas:
         "productoTitulo1"
         "productoImg1"
-        "productoTexto1"
-    ;
+        "productoTexto1";
 }
 
 .pDos {
@@ -111,9 +110,10 @@
 .productoImg4 {
     display: flex;
     justify-content: center;
-    img{
-    margin: 0 auto 0 auto;
-    height: 150px;
+
+    img {
+        margin: 0 auto 0 auto;
+        height: 150px;
     }
 }
 
@@ -198,6 +198,7 @@
     .productoTexto3,
     .productoTexto4 {
         width: 100%;
+
         p {
             width: 90%;
         }

@@ -103,8 +103,6 @@
     grid-template-areas:
         "secondaryGrid"
         "footerGrid";
-    grid-column-start: 1;
-    grid-column-end: 3;
 }
 
 .secondaryGrid {
@@ -120,8 +118,6 @@
         "visionTexto"
         "misionTitulo"
         "misionTexto";
-    grid-column-start: 1;
-    grid-column-end: 3;
 }
 
 @media (min-width: 768px) {
@@ -139,8 +135,6 @@
             "contGrid contGrid"
             "visionMisionGrid visionMisionGrid"
             "visionMisionGrid visionMisionGrid";
-        grid-column-start: 1;
-        grid-column-end: 3;
     }
 
 
