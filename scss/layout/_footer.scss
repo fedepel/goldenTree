@@ -9,7 +9,9 @@ footer {
     grid-template-areas:
         "footerTexto"
         "footerMapa"
-        "footerCopyright"
+        "footerCopyright";
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 .footerTexto {
@@ -19,7 +21,6 @@ footer {
 
     img {
         @include sizes(auto, 60px);
-        height: 60px;
         padding: 10px auto 10px auto;
     }
 

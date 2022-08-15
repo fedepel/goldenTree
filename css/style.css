@@ -106,7 +106,9 @@ footer {
 
 .footerGrid {
   display: grid;
-  grid-template-areas: "footerTexto" "footerMapa" "footerCopyright"; }
+  grid-template-areas: "footerTexto" "footerMapa" "footerCopyright";
+  grid-column-start: 1;
+  grid-column-end: 3; }
 
 .footerTexto {
   grid-area: footerTexto;
@@ -114,7 +116,6 @@ footer {
   font-weight: bolder; }
   .footerTexto img {
     width: auto;
-    height: 60px;
     height: 60px;
     padding: 10px auto 10px auto; }
   .footerTexto p {
