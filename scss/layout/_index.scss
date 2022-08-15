@@ -1,6 +1,6 @@
 .titulo {
     grid-area: titulo;
-    @include sizes(100%, auto);
+    @include sizes(100vw, auto);
     margin-top: 80px;
 }
 
@@ -9,7 +9,7 @@
     margin-bottom: 15px;
     background-color: $secondary-color;
     border-top: $main-color solid 5px;
-    @include sizes(100%, auto);
+    @include sizes(100vw, auto);
 
     h1 {
         text-align: center;
@@ -103,6 +103,7 @@
     grid-template-areas:
         "secondaryGrid"
         "footerGrid";
+    overflow: hidden;
 }
 
 .secondaryGrid {
