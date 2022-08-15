@@ -1,5 +1,5 @@
 .barraNav {
-    @include sizes(100%, 70px);
+    @include sizes(100vw, 70px);
     @include boxes(none, 0px, var(--shadow), $main-color);
     position: fixed;
     top: 0;
@@ -34,7 +34,7 @@
     position: fixed;
     left: 100%;
     top: 70px;
-    @include sizes(100%, calc(100% - 70px));
+    @include sizes(100vw, calc(100% - 70px));
     overflow-y: auto;
     transition: left 0.5s;
     padding-left: 0;

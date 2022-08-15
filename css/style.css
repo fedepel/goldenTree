@@ -14,7 +14,7 @@ body {
   background-image: url("../images/climpek.png"); }
 
 .barraNav {
-  width: 100%;
+  width: 100vw;
   height: 70px;
   border: none;
   border-radius: 0px;
@@ -50,7 +50,7 @@ body {
   position: fixed;
   left: 100%;
   top: 70px;
-  width: 100%;
+  width: 100vw;
   height: calc(100% - 70px);
   overflow-y: auto;
   transition: left 0.5s;
